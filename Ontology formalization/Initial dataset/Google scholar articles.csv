@@ -1,0 +1,429 @@
+Sr. No.,Title,,Citation,Downloaded
+1,A Perspective View and Survey of Meta-Learning,vilalta2002perspective,"@article{vilalta2002perspective,
+  title={A perspective view and survey of meta-learning},
+  author={Vilalta, Ricardo and Drissi, Youssef},
+  journal={Artificial intelligence review},
+  volume={18},
+  pages={77--95},
+  year={2002},
+  publisher={Springer}
+}",No
+2,Meta-Learning in Neural Networks: A Survey,hospedales2021meta,"@article{hospedales2021meta,
+  title={Meta-learning in neural networks: A survey},
+  author={Hospedales, Timothy and Antoniou, Antreas and Micaelli, Paul and Storkey, Amos},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={44},
+  number={9},
+  pages={5149--5169},
+  year={2021},
+  publisher={IEEE}
+}",Yes
+3,A survey of deep meta‑learning,huisman2021survey,"@article{huisman2021survey,
+  title={A survey of deep meta-learning},
+  author={Huisman, Mike and Van Rijn, Jan N and Plaat, Aske},
+  journal={Artificial Intelligence Review},
+  volume={54},
+  number={6},
+  pages={4483--4541},
+  year={2021},
+  publisher={Springer}
+}",Yes
+4,Meta-Learning: A Survey,vanschoren2018meta,"@article{vanschoren2018meta,
+  title={Meta-learning: A survey},
+  author={Vanschoren, Joaquin},
+  journal={arXiv preprint arXiv:1810.03548},
+  year={2018}
+}",Yes
+5,A Comprehensive Overview and Survey of Recent Advances in Meta-Learning,peng2020comprehensive,"@article{peng2020comprehensive,
+  title={A comprehensive overview and survey of recent advances in meta-learning},
+  author={Peng, Huimin},
+  journal={arXiv preprint arXiv:2004.11149},
+  year={2020}
+}",Yes
+6,Meta-learning approaches for learning-to-learn in deep learning: A survey,tian2022meta,"@article{tian2022meta,
+  title={Meta-learning approaches for learning-to-learn in deep learning: A survey},
+  author={Tian, Yingjie and Zhao, Xiaoxi and Huang, Wei},
+  journal={Neurocomputing},
+  volume={494},
+  pages={203--223},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+7,Multimodality in meta-learning: A comprehensive survey,ma2022multimodality,"@article{ma2022multimodality,
+  title={Multimodality in meta-learning: A comprehensive survey},
+  author={Ma, Yao and Zhao, Shilin and Wang, Weixiao and Li, Yaoman and King, Irwin},
+  journal={Knowledge-Based Systems},
+  volume={250},
+  pages={108976},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+8,Meta-learning for Few-shot Natural Language Processing: A Survey,yin2020meta,"@article{yin2020meta,
+  title={Meta-learning for few-shot natural language processing: A survey},
+  author={Yin, Wenpeng},
+  journal={arXiv preprint arXiv:2007.09604},
+  year={2020}
+}",Yes
+9,A Literature Survey and Empirical Study of Meta-Learning for Classifier Selection,khan2020literature,"@article{khan2020literature,
+  title={A literature survey and empirical study of meta-learning for classifier selection},
+  author={Khan, Irfan and Zhang, Xianchao and Rehman, Mobashar and Ali, Rahman},
+  journal={IEEE Access},
+  volume={8},
+  pages={10262--10281},
+  year={2020},
+  publisher={IEEE}
+}",Yes
+10,Meta-learning approaches for few-shot learning: A survey of recent advances,gharoun2023meta,"@article{gharoun2023meta,
+  title={Meta-learning approaches for few-shot learning: A survey of recent advances},
+  author={Gharoun, Hassan and Momenifar, Fereshteh and Chen, Fang and Gandomi, Amir},
+  journal={ACM Computing Surveys},
+  year={2023},
+  publisher={ACM New York, NY}
+}",Yes
+11,Meta Learning for Natural Language Processing: A Survey,lee2022meta,"@article{lee2022meta,
+  title={Meta learning for natural language processing: A survey},
+  author={Lee, Hung-yi and Li, Shang-Wen and Vu, Ngoc Thang},
+  journal={arXiv preprint arXiv:2205.01500},
+  year={2022}
+}",Yes
+12,A survey & current research challenges in meta learning approaches based on dataset characteristics,bhatt2012survey,"@article{bhatt2012survey,
+  title={A survey \& current research challenges in meta learning approaches based on dataset characteristics},
+  author={Bhatt, Nikita and Thakkar, Amit and Ganatra, Amit},
+  journal={International Journal of soft computing and Engineering},
+  volume={2},
+  number={10},
+  pages={234--247},
+  year={2012},
+  publisher={Citeseer}
+}",Yes
+13,Meta-learning in natural and artificial intelligence,wang2021meta,"@article{wang2021meta,
+  title={Meta-learning in natural and artificial intelligence},
+  author={Wang, Jane X},
+  journal={Current Opinion in Behavioral Sciences},
+  volume={38},
+  pages={90--95},
+  year={2021},
+  publisher={Elsevier}
+}",Yes
+14,Advances and Challenges in Meta-Learning: A Technical Review,vettoruzzo2024advances,"@article{vettoruzzo2024advances,
+  title={Advances and challenges in meta-learning: A technical review},
+  author={Vettoruzzo, Anna and Bouguelia, Mohamed-Rafik and Vanschoren, Joaquin and Rognvaldsson, Thorsteinn and Santosh, KC},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}",Yes
+15,Meta-seg: A survey of meta-learning for image segmentation,luo2022meta,"@article{luo2022meta,
+  title={Meta-seg: A survey of meta-learning for image segmentation},
+  author={Luo, Shuai and Li, Yujie and Gao, Pengxiang and Wang, Yichuan and Serikawa, Seiichi},
+  journal={Pattern Recognition},
+  volume={126},
+  pages={108586},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+16,Meta-features for meta-learning,rivolli2022meta,"@article{rivolli2022meta,
+  title={Meta-features for meta-learning},
+  author={Rivolli, Adriano and Garcia, Lu{\'\i}s PF and Soares, Carlos and Vanschoren, Joaquin and de Carvalho, Andr{\'e} CPLF},
+  journal={Knowledge-Based Systems},
+  volume={240},
+  pages={108101},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+17,Application of meta-learning in cyberspace security: a survey,yang2023application,"@article{yang2023application,
+  title={Application of meta-learning in cyberspace security: A survey},
+  author={Yang, Aimin and Lu, Chaomeng and Li, Jie and Huang, Xiangdong and Ji, Tianhao and Li, Xichang and Sheng, Yichao},
+  journal={Digital Communications and Networks},
+  volume={9},
+  number={1},
+  pages={67--78},
+  year={2023},
+  publisher={Elsevier}
+}",Yes
+18,Cross-disciplinary perspectives on meta-learning for algorithm selection,smith2009cross,"@article{smith2009cross,
+  title={Cross-disciplinary perspectives on meta-learning for algorithm selection},
+  author={Smith-Miles, Kate A},
+  journal={ACM Computing Surveys (CSUR)},
+  volume={41},
+  number={1},
+  pages={1--25},
+  year={2009},
+  publisher={ACM New York, NY, USA}
+}",Yes
+19,Meta-Learning With Landmarking: A Survey,balte2014meta,"@article{balte2014meta,
+  title={Meta-learning with landmarking: A survey},
+  author={Balte, Ashvini and Pise, Nitin and Kulkarni, Parag},
+  journal={International Journal of Computer Applications},
+  volume={105},
+  number={8},
+  year={2014},
+  publisher={Foundation of Computer Science}
+}",Yes
+20,A Survey on Meta-learning Based Few-Shot Classification,huang2021survey,"@inproceedings{huang2021survey,
+  title={A survey on meta-learning based few-shot classification},
+  author={Huang, Weizhi and He, Ming and Wang, Yongle},
+  booktitle={International Conference on Machine Learning and Intelligent Communications},
+  pages={243--253},
+  year={2021},
+  organization={Springer}
+}",No
+21,MetaSeg: A survey of meta-learning for image segmentation,sun2021metaseg,"@article{sun2021metaseg,
+  title={MetaSeg: A survey of meta-learning for image segmentation},
+  author={Sun, Jiaxing and Li, Yujie},
+  journal={Cognitive Robotics},
+  volume={1},
+  pages={83--91},
+  year={2021},
+  publisher={Elsevier}
+}",Yes
+22,Survey on Automated Machine Learning (AutoML) and Meta learning,doke2021survey,"@inproceedings{doke2021survey,
+  title={Survey on automated machine learning (AutoML) and meta learning},
+  author={Doke, Ashwini and Gaikwad, Madhava},
+  booktitle={2021 12th International Conference on Computing Communication and Networking Technologies (ICCCNT)},
+  pages={1--5},
+  year={2021},
+  organization={IEEE}
+}",Yes
+23,Doing more with less: meta-reasoning and meta-learning in humans and machines,griffiths2019doing,"@article{griffiths2019doing,
+  title={Doing more with less: meta-reasoning and meta-learning in humans and machines},
+  author={Griffiths, Thomas L and Callaway, Frederick and Chang, Michael B and Grant, Erin and Krueger, Paul M and Lieder, Falk},
+  journal={Current Opinion in Behavioral Sciences},
+  volume={29},
+  pages={24--30},
+  year={2019},
+  publisher={Elsevier}
+}",Yes
+24,"Sharing to learn and learning to share; Fitting together Meta-Learning, Multi-Task Learning, and Transfer Learning: A meta review",upadhyay2021sharing,"@article{upadhyay2021sharing,
+  title={Sharing to learn and learning to share--Fitting together Meta-Learning, Multi-Task Learning, and Transfer Learning: A meta review},
+  author={Upadhyay, Richa and Phlypo, Ronald and Saini, Rajkumar and Liwicki, Marcus},
+  journal={arXiv preprint arXiv:2111.12146},
+  year={2021}
+}",Yes
+25,Medical deep learning—A systematic meta-review,egger2022medical,"@article{egger2022medical,
+  title={Medical deep learning—A systematic meta-review},
+  author={Egger, Jan and Gsaxner, Christina and Pepe, Antonio and Pomykala, Kelsey L and Jonske, Frederic and Kurz, Manuel and Li, Jianning and Kleesiek, Jens},
+  journal={Computer methods and programs in biomedicine},
+  volume={221},
+  pages={106874},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+26,Domain Generalization through Meta-Learning: A Survey,khoee2024domain,"@article{khoee2024domain,
+  title={Domain Generalization through Meta-Learning: A Survey},
+  author={Khoee, Arsham Gholamzadeh and Yu, Yinan and Feldt, Robert},
+  journal={arXiv preprint arXiv:2404.02785},
+  year={2024}
+}",Yes
+27,An overview on Meta-learning approaches for Few-shot Weakly-supervised Segmentation,gama2023overview,"@article{gama2023overview,
+  title={An overview on Meta-learning approaches for Few-shot Weakly-supervised Segmentation},
+  author={Gama, Pedro Henrique Targino and Oliveira, Hugo and dos Santos, Jefersson A and Cesar Jr, Roberto M},
+  journal={Computers \& Graphics},
+  year={2023},
+  publisher={Elsevier}
+}",Yes
+28,A concise review of recent few-shot meta-learning methods,li2021concise,"@article{li2021concise,
+  title={A concise review of recent few-shot meta-learning methods},
+  author={Li, Xiaoxu and Sun, Zhuo and Xue, Jing-Hao and Ma, Zhanyu},
+  journal={Neurocomputing},
+  volume={456},
+  pages={463--468},
+  year={2021},
+  publisher={Elsevier}
+}",Yes
+29,A Survey of Meta-Reinforcement Learning,beck2023survey,"@article{beck2023survey,
+  title={A survey of meta-reinforcement learning},
+  author={Beck, Jacob and Vuorio, Risto and Liu, Evan Zheran and Xiong, Zheng and Zintgraf, Luisa and Finn, Chelsea and Whiteson, Shimon},
+  journal={arXiv preprint arXiv:2301.08028},
+  year={2023}
+}",Yes
+30,Explainable AI (XAI): A systematic meta-survey of current challenges and future opportunities,saeed2023explainable,"@article{saeed2023explainable,
+  title={Explainable AI (XAI): A systematic meta-survey of current challenges and future opportunities},
+  author={Saeed, Waddah and Omlin, Christian},
+  journal={Knowledge-Based Systems},
+  volume={263},
+  pages={110273},
+  year={2023},
+  publisher={Elsevier}
+}",Yes
+31,Learning Together and Alone: Overview and Meta‐analysis,johnson2002learning,"@article{johnson2002learning,
+  title={Learning together and alone: Overview and meta-analysis},
+  author={Johnson, David W and Johnson, Roger T},
+  journal={Asia Pacific Journal of Education},
+  volume={22},
+  number={1},
+  pages={95--105},
+  year={2002},
+  publisher={Taylor \& Francis}
+}",Yes
+32,Review of trends from mobile learning studies: A meta-analysis,wu2012review,"@article{wu2012review,
+  title={Review of trends from mobile learning studies: A meta-analysis},
+  author={Wu, Wen-Hsiung and Wu, Yen-Chun Jim and Chen, Chun-Yu and Kao, Hao-Yun and Lin, Che-Hung and Huang, Sih-Han},
+  journal={Computers \& education},
+  volume={59},
+  number={2},
+  pages={817--827},
+  year={2012},
+  publisher={Elsevier}
+}",Yes
+33,Meta-learning in healthcare: A survey,rafiei2023meta,"@article{rafiei2023meta,
+  title={Meta-learning in healthcare: A survey},
+  author={Rafiei, Alireza and Moore, Ronald and Jahromi, Sina and Hajati, Farshid and Kamaleswaran, Rishikesan},
+  journal={arXiv preprint arXiv:2308.02877},
+  year={2023}
+}",Yes
+34,"Deep learning—a first meta-survey of selected reviews across scientific disciplines, their commonalities, challenges and research impact",egger2021deep,"@article{egger2021deep,
+  title={Deep learning—a first meta-survey of selected reviews across scientific disciplines, their commonalities, challenges and research impact},
+  author={Egger, Jan and Pepe, Antonio and Gsaxner, Christina and Jin, Yuan and Li, Jianning and Kern, Roman},
+  journal={PeerJ Computer Science},
+  volume={7},
+  pages={e773},
+  year={2021},
+  publisher={PeerJ Inc.}
+}",Yes
+35,Effects of Learning Skills Interventions on Student Learning: A Meta-Analysis,hattie1996effects,"@article{hattie1996effects,
+  title={Effects of learning skills interventions on student learning: A meta-analysis},
+  author={Hattie, John and Biggs, John and Purdie, Nola},
+  journal={Review of educational research},
+  volume={66},
+  number={2},
+  pages={99--136},
+  year={1996},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}",Yes
+36,Understanding the development of reward learning through the lens of meta-learning,nussenbaum2024understanding,"@article{nussenbaum2024understanding,
+  title={Understanding the development of reward learning through the lens of meta-learning},
+  author={Nussenbaum, Kate and Hartley, Catherine A},
+  journal={Nature Reviews Psychology},
+  pages={1--15},
+  year={2024},
+  publisher={Nature Publishing Group US New York}
+}",No
+37,Meta-Health: Learning-to-Learn (Meta-learning) as a Next Generation of Deep Learning Exploring Healthcare Challenges and Solutions for Rare Disorders: A Systematic Analysis,singh2023meta,"@article{singh2023meta,
+  title={Meta-health: learning-to-learn (meta-learning) as a next generation of deep learning exploring healthcare challenges and solutions for rare disorders: a systematic analysis},
+  author={Singh, Kuljeet and Malhotra, Deepti},
+  journal={Archives of Computational Methods in Engineering},
+  volume={30},
+  number={7},
+  pages={4081--4112},
+  year={2023},
+  publisher={Springer}
+}",No
+38,Using Meta-Learning to Support Data Mining,vilalta2004using,"@article{vilalta2004using,
+  title={Using Meta-Learning to Support Data Mining.},
+  author={Vilalta, Ricardo and Giraud-Carrier, Christophe G and Brazdil, Pavel and Soares, Carlos},
+  journal={Int. J. Comput. Sci. Appl.},
+  volume={1},
+  number={1},
+  pages={31--45},
+  year={2004}
+}",Yes
+39,"Meta-learning, social cognition and consciousness in brains and machines",langdon2022meta,"@article{langdon2022meta,
+  title={Meta-learning, social cognition and consciousness in brains and machines},
+  author={Langdon, Angela and Botvinick, Matthew and Nakahara, Hiroyuki and Tanaka, Keiji and Matsumoto, Masayuki and Kanai, Ryota},
+  journal={Neural Networks},
+  volume={145},
+  pages={80--89},
+  year={2022},
+  publisher={Elsevier}
+}",Yes
+40,Corpus Use in Language Learning: A Meta-Analysis,boulton2017corpus,"@article{boulton2017corpus,
+  title={Corpus use in language learning: A meta-analysis},
+  author={Boulton, Alex and Cobb, Tom},
+  journal={Language learning},
+  volume={67},
+  number={2},
+  pages={348--393},
+  year={2017},
+  publisher={Wiley Online Library}
+}",Yes
+41,Fake news detection based on explicit and implicit signals of a hybrid crowd: An approach inspired in meta-learning,freire2021fake,"@article{freire2021fake,
+  title={Fake news detection based on explicit and implicit signals of a hybrid crowd: An approach inspired in meta-learning},
+  author={Freire, Paulo M{\'a}rcio Souza and da Silva, Fl{\'a}vio Roberto Matias and Goldschmidt, Ronaldo Ribeiro},
+  journal={Expert Systems with Applications},
+  volume={183},
+  pages={115414},
+  year={2021},
+  publisher={Elsevier}
+}",Yes
+42,A Review of Federated Meta-Learning and Its Application in Cyberspace Security,liu2023review,"@article{liu2023review,
+  title={A review of federated meta-learning and its application in cyberspace security},
+  author={Liu, Fengchun and Li, Meng and Liu, Xiaoxiao and Xue, Tao and Ren, Jing and Zhang, Chunying},
+  journal={Electronics},
+  volume={12},
+  number={15},
+  pages={3295},
+  year={2023},
+  publisher={MDPI}
+}",Yes
+43,Rethinking the Use of Tests: A Meta-Analysis of Practice Testing,adesope2017rethinking,"@article{adesope2017rethinking,
+  title={Rethinking the use of tests: A meta-analysis of practice testing},
+  author={Adesope, Olusola O and Trevisan, Dominic A and Sundararajan, Narayankripa},
+  journal={Review of educational research},
+  volume={87},
+  number={3},
+  pages={659--701},
+  year={2017},
+  publisher={Sage Publications Sage CA: Los Angeles, CA}
+}",Yes
+44,"Federated Learning and Meta Learning: Approaches, Applications, and Directions",liu2023federated,"@article{liu2023federated,
+  title={Federated Learning and Meta Learning: Approaches, Applications, and Directions},
+  author={Liu, Xiaonan and Deng, Yansha and Nallanathan, Arumugam and Bennis, Mehdi},
+  journal={IEEE Communications Surveys \& Tutorials},
+  year={2023},
+  publisher={IEEE}
+}",Yes
+45,The Effectiveness of Online and Blended Learning: A Meta-Analysis of the Empirical Literature,means2013effectiveness,"@article{means2013effectiveness,
+  title={The effectiveness of online and blended learning: A meta-analysis of the empirical literature},
+  author={Means, Barbara and Toyama, Yukie and Murphy, Robert and Baki, Marianne},
+  journal={Teachers college record},
+  volume={115},
+  number={3},
+  pages={1--47},
+  year={2013},
+  publisher={SAGE Publications Sage CA: Los Angeles, CA}
+}",No
+46,Does problem-based learning work? A meta-analysis of evaluative research,vernon1993does,"@article{vernon1993does,
+  title={Does problem-based learning work? A meta-analysis of evaluative research},
+  author={Vernon, David T and Blake, Robert L},
+  journal={Academic medicine},
+  volume={68},
+  number={7},
+  pages={550--63},
+  year={1993},
+  publisher={LWW}
+}",Yes
+47,The Gamification of Learning: a Meta-analysis,sailer2020gamification,"@article{sailer2020gamification,
+  title={The gamification of learning: A meta-analysis},
+  author={Sailer, Michael and Homner, Lisa},
+  journal={Educational Psychology Review},
+  volume={32},
+  number={1},
+  pages={77--112},
+  year={2020},
+  publisher={Springer}
+}",Yes
+48,How effective are mobile devices for language learning? A meta-analysis,sung2015effective,"@article{sung2015effective,
+  title={How effective are mobile devices for language learning? A meta-analysis},
+  author={Sung, Yao-Ting and Chang, Kuo-En and Yang, Je-Ming},
+  journal={Educational research review},
+  volume={16},
+  pages={68--84},
+  year={2015},
+  publisher={Elsevier}
+}",Yes
+49,Are We Learning Yet? A Meta Review of Evaluation Failures Across Machine Learning,liao2021we,"@inproceedings{liao2021we,
+  title={Are we learning yet? a meta review of evaluation failures across machine learning},
+  author={Liao, Thomas and Taori, Rohan and Raji, Inioluwa Deborah and Schmidt, Ludwig},
+  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},
+  year={2021}
+}",Yes
+50,What Forty Years of Research Says About the Impact of Technology on Learning: A Second-Order Meta-Analysis and Validation Study,tamim2011forty,"@article{tamim2011forty,
+  title={What forty years of research says about the impact of technology on learning: A second-order meta-analysis and validation study},
+  author={Tamim, Rana M and Bernard, Robert M and Borokhovski, Eugene and Abrami, Philip C and Schmid, Richard F},
+  journal={Review of Educational research},
+  volume={81},
+  number={1},
+  pages={4--28},
+  year={2011},
+  publisher={Sage Publications Sage CA: Los Angeles, CA}
+}",Yes
