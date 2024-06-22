@@ -1,0 +1,2678 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://purl.archive.org/domain/mtl"
+     xml:base="https://purl.archive.org/domain/mtl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dqv="http://www.w3.org/ns/dqv#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:DMOP="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#">
+    <owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
+        <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#inCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inCategory">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#inDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inDimension">
+        <rdfs:domain rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:comment>Relates a data characteristic/quality metric to its corresponding dimension.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#hasMetaObjective -->
+
+    <owl:ObjectProperty rdf:about="https://purl.archive.org/domain/mtl#hasMetaObjective">
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToOptimize"/>
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToTransfer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#hasMetaOptimizer -->
+
+    <owl:ObjectProperty rdf:about="https://purl.archive.org/domain/mtl#hasMetaOptimizer">
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToOptimize"/>
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToTransfer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#hasMetaRepresentation -->
+
+    <owl:ObjectProperty rdf:about="https://purl.archive.org/domain/mtl#hasMetaRepresentation">
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToOptimize"/>
+        <rdfs:domain rdf:resource="https://purl.archive.org/domain/mtl#LearningToTransfer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Noise ratio, which describes the amount of irrelevant information contained in the dataset.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nsRatio</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of Categorial features</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nrCat</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of attributes/features</rdfs:comment>
+        <rdfs:isDefinedBy>MFE: nrAttr</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of Instances</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nrInst</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstancesPerFeature -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstancesPerFeature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:instToAttr</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Category -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Category">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Dimension -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Dimension">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#AUC -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#AUC">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Accuracy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Accuracy">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ActivationFunction -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ActivationFunction">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Activation function for hidden layers (e.g., ‘relu’, ‘tanh’, ‘logistic’).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Assortativity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Assortativity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Refers to the Pearson correlation coefficient of degree between pairs of connected vertices. Positive assortative values reveal a correlation between vertices of similar degree, while negative values expose relationships between vertices of different degree.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#AttributeConcentration -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#AttributeConcentration">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Attributes concentration. It is the Goodman and Kruskal&apos;s tau measure otherwise known as the concentration coefficient computed for each pair of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:attrConc</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#AttributesEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#AttributesEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Attributes entropy, a measure of randomness of each attribute in the dataset (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:attrEnt</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#AuthorityScore -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#AuthorityScore">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The authority scores of the vertices correspond to the principal eigenvector of 
+A(t) * A, in which  is the adjacency matrix of the graph and  A(t)  is its transpose. A vertex has a high authority score if many vertices with high hub scores point to it. Hence, good hubs are those which point to many good authorities and good authorities are those pointed to by many good hubs. For undirected graphs, the adjacency matrix A  is symmetric and the authority scores are the same as hub scores. The measure used to calculate the authority scores in weighted graphs interprets the vertex edge weights as connection strengths. Thus, we can argue that a vertex is important because it links to other important vertices through edges with high weights. 
+
+MultiValued: Min, Max, Average, EighenValue.
+
+ This is also computed for weighted graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#BatchSize -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#BatchSize">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Size of mini-batches for stochastic optimizers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#BestNode -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#BestNode">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Construct a single decision tree node model induced by the most informative attribute to establish the linear separability (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#BetweennessCentrality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#BetweennessCentrality">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The betweenness centrality for each vertex is the number of geodesics (shortest paths) that pass through the vertex.	
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#BoundaryComplexity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#BoundaryComplexity">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ClassificationQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#C1 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#C1">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entropy of class proportions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#C2 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#C2">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Multi-class imbalance ratio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#CanonicalCorrelation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#CanonicalCorrelation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Canonical correlations between the predictive attributes and the class (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:canCor</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClassConcentration -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClassConcentration">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class concentration, similar to &quot;attrConc&quot;, however, it is computed for each attribute and the class (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:classConc</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClassEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClassEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class entropy, which describes how much information is necessary to specify the class in the dataset.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:classEnt</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClassImbalance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClassImbalance">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ClassificationQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClassOverlap -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClassOverlap">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ClassificationQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClassificationQuality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClassificationQuality">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClosenessCentrality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClosenessCentrality">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Closeness centrality is a measure computed for each vertex of the graph. It calculates how many steps are needed to access every other vertex from a given vertex.	
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ClusteringCoefficient -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ClusteringCoefficient">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The clustering coefficient of a vertex is the ratio of the triangles connected to the vertex and the triples centered on the vertex. It estimates how well connected the neighborhood of the vertex is. The weighted clustering coefficient, in turn, is a measure that combines topological information with the weight distribution of the graph. Here we use the definition by A. Barrat, which considers only weights of edges adjacent to the vertex of interest but not the weights of edges between neighbors of the investigated vertex. 
+
+MultiValued: Min, Max, Average, EigenValue. 
+
+This is also computed for weighted graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Complexity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Constraint -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The constraint measure calculates Burt’s constraint for each vertex of the graph. The main idea is to determine the extent to which a vertex V  is invested in those vertices that are themselves invested in the neighbors of V.
+
+MultiValued: Min, Max, Average, Median</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Contrast -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Contrast">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Coreness -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Coreness">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The k-core of a graph is the largest subgraph where each vertex has at least degree 
+k. The coreness of a vertex is 
+ if it pertains to the k-core but not to the 
+(k+1)-core.
+
+Multivalued: Min, Max, Average, Median, Mode</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Correlation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Correlation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Absolute attributes correlation, which measures the correlation between each pair of the numeric attributes in the dataset (multi-valued). This measure accepts an extra argument called method = c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:cor</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#CorrelationDegreeCentrality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#CorrelationDegreeCentrality">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Corresponds to the correlation between the degree of the graph and the subgraph centrality of the vertices. The subgraph centrality of a vertex computes the number of subgraphs a vertex participates in, weighting them according to their size.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Covariance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Covariance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Absolute attributes covariance, which measures the covariance between each pair of the numeric attributes in the dataset (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:cov</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#DataSetQuality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#DataSetQuality">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Degree -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Degree">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Degree is a measure applied for each vertex of the graph. The degree of a vertex is the total number of its adjacent edges.
+
+Multi-valued: Min, Max, Average, Mdeian and mode</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Diameter -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Diameter">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The diameter is the maximum geodesic distance between any pair of vertices in the graph. In other words, it is the length of the longest geodesic between any pair of vertices.	
+
+Calculated for weighted graph as well.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Diversity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Diversity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Diversity is a measure computed for each vertex of the graph. We defined diversity as the Shannon entropy of the weights of its incident edges.	
+
+Multivalued: Min, Max, Average, Median</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Eccentricity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Eccentricity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Eccentricity is a measure applied for each vertex of the graph. The eccentricity of a vertex V  is the maximum distance from V to any vertex. 
+
+Multivalued: Min, Max, Average, Median, and Mode</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#EdgeDensity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#EdgeDensity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ratio between the number of edges and the number of possible edges.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#EigenValues -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#EigenValues">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Eigenvalues of the covariance matrix (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:eigenvalues</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#EigenVectorCentrality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#EigenVectorCentrality">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The eigenvector centrality assigns relative scores to all vertices in the graph based on the concept that connections to high-scoring vertices contribute more to the score of the vertex in question than connections to low-scoring vertices. In general, vertices with high eigenvector centralities are connected to many other vertices, which, in turn, are connected to many others.
+
+ MultiValued: Min, Max, Average, EigenVector. 
+
+This is also computed for weighted graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#EliteNNPerformance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#EliteNNPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Elite nearest neighbor uses the most informative attribute in the dataset to induce the 1-nearest neighbor. With the subset of informative attributes, it is expected that the models should be noise tolerant (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Energy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures the textural uniformity based on pixel pair repetitions. High energy values indicate that there are more instances of intensity value pairs in the image that neighbor each other at higher frequencies.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#EqNumberOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#EqNumberOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Equivalent number of attributes, which represents the number of attributes suitable to optimally solve the classification task using the dataset.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:eqNumAttr</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F1 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F1">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Fisher&apos;s discriminant ratio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F1Score -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F1Score">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F1v -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F1v">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The directional-vector Fisher&apos;s discriminant ratio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F2 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F2">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:comment>Overlapping of the per-class bounding boxes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F3 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F3">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:comment>Maximum individual feature efficiency.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#F4 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#F4">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Collective feature efficiency.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#FrequencyClass -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#FrequencyClass">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:freqClass</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Gamma -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Gamma">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Kernel coefficient for ‘rbf’, ‘poly’, and ‘sigmoid’.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#GeometricMean -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#GeometricMean">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Geometric mean of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:gMean</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#GraphBased -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#GraphBased">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Gravity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Gravity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Center of gravity, which is the distance between the instance in the center of the majority class and the instance-center of the minority class.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:gravity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#HarmonicMean -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#HarmonicMean">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Harmonic mean of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:hMean</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#HyperParameter -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#HyperParameter">
+        <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImageBased -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImageBased">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgCorrelation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgCorrelation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgDiffEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgDiffEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures the disorder associated with the gray level difference distribution of the image.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgDiffVariance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgDiffVariance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This descriptor is a measure of heterogeneity that assigns higher weights on differing intensity level pairs which deviate more from the mean.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It measures the complexity or disorder of an image. A high entropy value results from an image that is not texturally uniform.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgHomogeneity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgHomogeneity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures image homogeneity as it assumes larger values for smaller gray tone differences in pair elements. In terms of GLCM, homogeneity decreases if contrast increases while energy is kept constant.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ImgVariance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ImgVariance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This descriptor is a measure of heterogeneity. Variance increases when the gray level values differ from their mean.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#InformationTheoretical -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#InformationTheoretical">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#InformationalMeasureCorrelation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#InformationalMeasureCorrelation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#InterquartileRange -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#InterquartileRange">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Interquartile range of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:iqRange</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#JointEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#JointEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Joint entropy, which represents the total entropy of each attribute and the class (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:jointEnt</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Kernel -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Kernel">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Type of kernel (e.g., ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Kurtosis -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Kurtosis">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Kurtosis of attributes (multi-valued)</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:kurtosis</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#L1 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#L1">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Distance of erroneous instances to a linear classifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#L2 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#L2">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Training error of a linear classifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#L3 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#L3">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Nonlinearity of a linear classifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LSC -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LSC">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Local-Set cardinality average.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LabelNoise -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LabelNoise">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ClassificationQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Landmarking -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Landmarking">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LearningFromModelEvaluation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LearningFromModelEvaluation">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#LearningToOptimize"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataProcessingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#InductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LearningFromTaskProperties -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LearningFromTaskProperties">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#LearningToOptimize"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataProcessingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#InductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LearningRate -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LearningRate">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Learning rate for weight updates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LearningToOptimize -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LearningToOptimize">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LearningToTransfer -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LearningToTransfer">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaOptimizer"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.archive.org/domain/mtl#hasMetaRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Leaves -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Leaves">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of leaves of the DT model.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:leaves</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LeavesBranch -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LeavesBranch">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Size of branches, which consists in the level of all leaves of the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:leavesBranch</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LeavesCorroboration -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LeavesCorroboration">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Leaves corroboration, which is the proportion of examples that belong to each leaf of the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:leavesCorrob</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LeavesHomogeneiy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LeavesHomogeneiy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Homogeneity, which is the number of leaves divided by the structural shape of the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:leavesHomo</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LeavesPerClass -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LeavesPerClass">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Leaves per class, which is the proportion of leaves of the DT model associated with each class (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:leavesPerClass</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LinearDiscriminantClassifier -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LinearDiscriminantClassifier">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Apply the Linear Discriminant classifier to construct a linear split (non-parallel axis) in the data to establish the linear separability (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#LocalScan -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#LocalScan">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The scan statistic is a summary of the locality statistics that is computed from the local neighborhood of each vertex.
+
+Multivalued: Min, Max, Average, Median and Mode.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MAE -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MAE">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MaxDepth -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MaxDepth">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Maximum depth of the tree</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MaxFeatures -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MaxFeatures">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of features to consider when looking for the best split.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MaxIterations -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MaxIterations">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of iterations for optimization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MaximalCorrelationCoefficient -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MaximalCorrelationCoefficient">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MaximumOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MaximumOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Maximum value of attributes (multi-valued)</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:max</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MeanOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MeanOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Mean value of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:mean</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MedianAbsoluteDeviation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MedianAbsoluteDeviation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Median absolute deviation of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:mad</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MedianOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MedianOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Median value of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:median</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaFeatures -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaLearningAlgorithm -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaObjective -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaObjective">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaOptimizer -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaOptimizer">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaQuality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaQuality">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MetaRepresentation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MetaRepresentation">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#MetaLearningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MinSamplesLeaf -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MinSamplesLeaf">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Minimum number of samples required to be at a leaf node.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MinSamplesSplit -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MinSamplesSplit">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Minimum number of samples required to split an internal node.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MinimumOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MinimumOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Minimum value of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:min</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MissingValueAnalysis -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MissingValueAnalysis">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#RegressionQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ModelBased -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ModelBased">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Modularity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Modularity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Corresponds to the modularity score, i.e., how modular is a given division of a graph into subgraphs (communities). A simple way to detect communities is through the use of the fast greedy modularity optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#MutualInformation -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#MutualInformation">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#InformationTheoretical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#N1 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#N1">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Fraction of points lying on the class boundary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#N2 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#N2">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Average intra/inter class nearest neighbor distances.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#N3 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#N3">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Leave-one-out error rate of the 1-nearest neighbor algorithm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#N4 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#N4">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Nonlinearity of the one-nearest neighbor classifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NaiveBayesPerfomance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NaiveBayesPerfomance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Evaluate the performance of the Naive Bayes classifier. It assumes that the attributes are independent and each example belongs to a certain class based on the Bayes probability (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Nodes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Nodes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of nodes of the DT model.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nodes</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NodesPerAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NodesPerAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ratio of the number of nodes of the DT model per the number of attributes.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nodesPerAttr</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NodesPerInstances -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NodesPerInstances">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ratio of the number of nodes of the DT model per the number of attributes.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nodesPerInst</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NodesPerLevel -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NodesPerLevel">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of nodes of the DT model per level (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nodesPerLevel</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NodesRepeated -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NodesRepeated">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Repeated nodes, which is the number of repeated attributes that appear in the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nodesRepeated</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfAttrwithNormalDistribution -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfAttrwithNormalDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of attributes with normal distribution. The Shapiro-Wilk Normality Test is used to assess if an attribute is normally distributed (multi-valued only when by.class=TRUE).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nrNorm</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfBinaryAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfBinaryAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:neBin</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfClasses -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfClasses">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:nrClass</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfClusters -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfClusters">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of clusters to form and the number of centroids to generate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfCommunities -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfCommunities">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Indicates the number of dense subgraphs (communities) in a graph. We can find community structures employing the fast greedy modularity optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfDiscriminantFunctions -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfDiscriminantFunctions">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of the discriminant functions.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE: nrDisc</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfEdges -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfEdges">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Property associated with the size of the graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfEpochs -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfEpochs">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of iterations over the training data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfGroups -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfGroups">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Refers to the number of clusters (groups of vertices) found. We can perform clustering by calculating the maximal connected components of the graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfHighlyCorrelatedAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfHighlyCorrelatedAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of attribute pairs with high correlation (multi-valued when by.class=TRUE).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nrCorAttr</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfLayers -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfLayers">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of hidden layers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfNeuronsPerLayer -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfNeuronsPerLayer">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Number of neurons in each hidden layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfOutliers -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfOutliers">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Number of attributes with outlier values. Turkey&apos;s boxplot algorithm is used to compute if an attribute has or does not have outliers (multi-valued only when by.class=TRUE).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:nrOutliers</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberOfTriangles -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberOfTriangles">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Given a graph, it counts how many triangles each vertex is part of.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#NumberofNumericAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#NumberofNumericAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:nrNum</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#OneNNPerformance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#OneNNPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Evaluate the performance of the 1-nearest neighbor classifier. It uses the Euclidean distance of the nearest neighbor to determine how noisy the data is (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#OutlierDetection -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#OutlierDetection">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#DataSetQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ClassificationQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#PageRank -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#PageRank">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Google’s PageRank is a variant of eigenvector centrality that assigns a numeric weight to each vertex in the graph, intending to estimate its relative importance within the set of vertices. We can compute it by either iteratively distributing one vertex’s rank – originally based on degree – over its neighbors or by randomly traversing the graph and counting the frequency of hitting each vertex during these walks. The links are also weighted depending on the relative score of its originating node. The result is that vertices with several incoming links are influential, and nodes to which they are linked share some of that influence. 
+
+Multivalued: Min, Max, Average and Median. This is also computed for weighted graph.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Penalty -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Penalty">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Type of regularization (e.g., L1, L2)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#PerfomanceMetrics -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#PerfomanceMetrics">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Precision -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Precision">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ProportionOfAttrToInstances -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ProportionOfAttrToInstances">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:attrToInst</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ProportionOfCatToNumeric -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ProportionOfCatToNumeric">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:catToNum</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#ProportionOfNumToCategoricalAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#ProportionOfNumToCategoricalAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>MFE:numToCat</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#RMSE -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#RMSE">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#RandomNode -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#RandomNode">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Construct a single decision tree node model induced by a random attribute. The combination with the &quot;bestNode&quot; measure can establish the linear separability (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Range -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Range">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Range of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:range</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Recall -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Recall">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#PerfomanceMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#RegressionQuality -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#RegressionQuality">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#RegularizationStrength -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#RegularizationStrength">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Simple -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Simple">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Simple meta-features include general information related to the dataset. It is also known as general measures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Skewness -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Skewness">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Skewness of attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:skewness</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Solver -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Solver">
+        <rdfs:subClassOf rdf:resource="https://purl.archive.org/domain/mtl#HyperParameter"/>
+        <rdfs:comment>Algorithm to use for optimization (e.g., ‘liblinear’, ‘saga’)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Sparsity -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Sparsity">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Attributes sparsity, which represents the degree of discreetness of each attribute in the dataset (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:sparsity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#StatTestHomogeneityOfCovariance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#StatTestHomogeneityOfCovariance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Statistic test for homogeneity of covariances.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:sdRatio</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Statistical -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Statistical">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#MetaFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#StdDevOfAttributes -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#StdDevOfAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Standard deviation of the attributes (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:sd</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Strength -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Strength">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#GraphBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Strength (or degree for the unweighted version) is a measure computed for each vertex of the graph. The strength of a vertex is the total sum of the weights of its adjacent edges.	
+
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#SumAverage -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#SumAverage">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Measures the relationship between occurrences of pairs with lower intensity values and occurrences of pairs with higher intensity values.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#SumEntropy -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#SumEntropy">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It is a sum of neighborhood intensity value differences.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#SumVariance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#SumVariance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ImageBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This descriptor is a measure of heterogeneity that assigns higher weights on neighboring intensity level pairs which deviate more from the mean.</rdfs:comment>
+        <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#T1 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#T1">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Fraction of maximum covering spheres on data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#T2 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#T2">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Average number of samples per dimension.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#T3 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#T3">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Average intrinsic dimensionality per number of examples.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#T4 -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#T4">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Complexity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Intrinsic dimensionality proportion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#TreeDepth -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#TreeDepth">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Tree depth, which is the level of all tree nodes and leaves of the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:treeDepth</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#TreeImbalance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#TreeImbalance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Tree imbalance (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:treeImbalance</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#TreeShape -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#TreeShape">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Tree shape, which is the probability of arriving in each leaf given a random walk. We call this the structural shape of the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:treeShape</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#TrimmedMean -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#TrimmedMean">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trimmed mean of attributes (multi-valued). It is the arithmetic mean excluding the 20% of the lowest and highest instances.</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:tMean</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#VariableImportance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#VariableImportance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#ModelBased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Variable importance. It is calculated using the Gini index to estimate the amount of information used in the DT model (multi-valued).</rdfs:comment>
+        <rdfs:isDefinedBy>MFE:varImportance</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#Variance -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#Variance">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Attributes variance (multi-valued)</rdfs:comment>
+        <rdfs:isDefinedBy>MFE: var</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#WilksLambda -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#WilksLambda">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Statistical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Wilks Lambda</rdfs:comment>
+        <rdfs:isDefinedBy>MFE: wLambda</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.archive.org/domain/mtl#WorstNode -->
+
+    <owl:Class rdf:about="https://purl.archive.org/domain/mtl#WorstNode">
+        <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+                <owl:someValuesFrom rdf:resource="https://purl.archive.org/domain/mtl#Landmarking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Construct a single decision tree node model induced by the worst informative attribute. The combination with the &quot;bestNode&quot; measure can establish the linear separability (multi-valued).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageFeatureEntropy">
+        <rdfs:comment>This is equivalent to AttributeEntropy mean = MFE:attrEntropy.mean</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
