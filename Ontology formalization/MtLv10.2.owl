@@ -1,0 +1,3502 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://purl.archive.org/domain/mtl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://purl.archive.org/domain/mtl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl</Import>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/dqv#Category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AUC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivationFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Assortativity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttributeConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttributesEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AuthorityScore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BatchSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BestNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BetweennessCentrality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoundaryComplexity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#C1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#C2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanonicalCorrelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassImbalance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassOverlap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassificationQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClosenessCentrality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClusteringCoefficient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complexity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Constraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contrast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coreness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Correlation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CorrelationDegreeCentrality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Covariance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataSetQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Degree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diversity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eccentricity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EdgeDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EigenValues"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EigenVectorCentrality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EliteNNPerformance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EqNumberOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F1Score"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F1v"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#F4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrequencyClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gamma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeometricMean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GraphBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gravity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HarmonicMean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HyperParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImageBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgCorrelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgDiffEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgDiffVariance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgHomogeneity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImgVariance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationTheoretical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationalMeasureCorrelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterquartileRange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JointEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kernel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kurtosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#L1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#L2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#L3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LSC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LabelNoise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Landmarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningFromModelEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningFromTaskProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningToOptimize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningToTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leaves"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeavesBranch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeavesCorroboration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeavesHomogeneiy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeavesPerClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinearDiscriminantClassifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocalScan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MAE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxDepth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxFeatures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxIterations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaximalCorrelationCoefficient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaximumOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeanOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedianAbsoluteDeviation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedianOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaFeatures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaLearningAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinSamplesLeaf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinSamplesSplit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinimumOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MissingValueAnalysis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Modularity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MutualInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#N1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#N2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#N3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#N4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NaiveBayesPerfomance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nodes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NodesPerAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NodesPerInstances"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NodesPerLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NodesRepeated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfAttrwithNormalDistribution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfBinaryAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfClasses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfClusters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfCommunities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfDiscriminantFunctions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfEdges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfEpochs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfGroups"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfHighlyCorrelatedAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfLayers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfNeuronsPerLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfOutliers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberOfTriangles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumberofNumericAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OneNNPerformance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutlierDetection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PageRank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Penalty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PerfomanceMetrics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Precision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProportionOfAttrToInstances"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProportionOfCatToNumeric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProportionOfNumToCategoricalAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RMSE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RandomNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Range"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegressionQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegularizationStrength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skewness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Solver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sparsity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StatTestHomogeneityOfCovariance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statistical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StdDevOfAttributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SumAverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SumEntropy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SumVariance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#T1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#T2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#T3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#T4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TreeDepth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TreeImbalance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TreeShape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrimmedMean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VariableImportance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WilksLambda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorstNode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetaObjective"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetaOptimizer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetaRepresentation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstancesPerFeature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/dqv#Category"/>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AUC"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accuracy"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivationFunction"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assortativity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assortativity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttributeConcentration"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttributeConcentration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttributesEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttributesEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuthorityScore"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuthorityScore"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BatchSize"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BestNode"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BestNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BetweennessCentrality"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BetweennessCentrality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundaryComplexity"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundaryComplexity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ClassificationQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#C1"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#C1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#C2"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#C2"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanonicalCorrelation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanonicalCorrelation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassConcentration"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassConcentration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassImbalance"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassImbalance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ClassificationQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassOverlap"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassOverlap"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ClassificationQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassificationQuality"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassificationQuality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClosenessCentrality"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClosenessCentrality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClusteringCoefficient"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClusteringCoefficient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complexity"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complexity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constraint"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constraint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contrast"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contrast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coreness"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coreness"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Correlation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Correlation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CorrelationDegreeCentrality"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CorrelationDegreeCentrality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Covariance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Covariance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataSetQuality"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Degree"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Degree"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diameter"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diameter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diversity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diversity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eccentricity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eccentricity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EdgeDensity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EdgeDensity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EigenValues"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EigenValues"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EigenVectorCentrality"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EigenVectorCentrality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EliteNNPerformance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EliteNNPerformance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Energy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Energy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EqNumberOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EqNumberOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F1"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F1Score"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F1v"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F1v"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F2"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F3"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F4"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#F4"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrequencyClass"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrequencyClass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gamma"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometricMean"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometricMean"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GraphBased"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GraphBased"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gravity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gravity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HarmonicMean"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HarmonicMean"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HyperParameter"/>
+        <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImageBased"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImageBased"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgCorrelation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgCorrelation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgDiffEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgDiffEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgDiffVariance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgDiffVariance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgHomogeneity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgHomogeneity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgVariance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImgVariance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationTheoretical"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationTheoretical"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationalMeasureCorrelation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationalMeasureCorrelation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterquartileRange"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterquartileRange"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JointEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JointEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kernel"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kurtosis"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kurtosis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L1"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L2"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L2"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L3"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#L3"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LSC"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LSC"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LabelNoise"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LabelNoise"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ClassificationQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Landmarking"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Landmarking"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <Class IRI="#LearningToOptimize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaObjective"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataProcessingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaObjective"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#InductionAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="#HyperParameter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromModelEvaluation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="#PerfomanceMetrics"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <Class IRI="#LearningToOptimize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaObjective"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataProcessingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaObjective"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#InductionAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningFromTaskProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="#DataSetQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningRate"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToOptimize"/>
+        <Class IRI="#MetaLearningAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <Class IRI="#MetaLearningAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaObjective"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaOptimizer"/>
+            <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PatternDiscoveryAlgorithm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="#HyperParameter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningToTransfer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaRepresentation"/>
+            <Class IRI="#PerfomanceMetrics"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leaves"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leaves"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesBranch"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesBranch"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesCorroboration"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesCorroboration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesHomogeneiy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesHomogeneiy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesPerClass"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeavesPerClass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinearDiscriminantClassifier"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinearDiscriminantClassifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalScan"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalScan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MAE"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxDepth"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxFeatures"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxIterations"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaximalCorrelationCoefficient"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaximalCorrelationCoefficient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaximumOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaximumOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeanOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeanOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedianAbsoluteDeviation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedianAbsoluteDeviation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedianOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedianOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaFeatures"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaLearningAlgorithm"/>
+        <Class IRI="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Algorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaQuality"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinSamplesLeaf"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinSamplesSplit"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinimumOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinimumOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MissingValueAnalysis"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MissingValueAnalysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#RegressionQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBased"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBased"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Modularity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Modularity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MutualInformation"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MutualInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#InformationTheoretical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N1"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N2"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N2"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N3"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N3"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N4"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#N4"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaiveBayesPerfomance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaiveBayesPerfomance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nodes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nodes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerInstances"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerInstances"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerLevel"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesPerLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesRepeated"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NodesRepeated"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfAttrwithNormalDistribution"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfAttrwithNormalDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfBinaryAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfBinaryAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfClasses"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfClasses"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfClusters"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfCommunities"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfCommunities"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfDiscriminantFunctions"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfDiscriminantFunctions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfEdges"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfEdges"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfEpochs"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfGroups"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfGroups"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfHighlyCorrelatedAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfHighlyCorrelatedAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfLayers"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfNeuronsPerLayer"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfOutliers"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfOutliers"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfTriangles"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberOfTriangles"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberofNumericAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumberofNumericAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OneNNPerformance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OneNNPerformance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutlierDetection"/>
+        <Class IRI="#DataSetQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutlierDetection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ClassificationQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PageRank"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PageRank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Penalty"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PerfomanceMetrics"/>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Precision"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfAttrToInstances"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfAttrToInstances"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfCatToNumeric"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfCatToNumeric"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfNumToCategoricalAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProportionOfNumToCategoricalAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RMSE"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RandomNode"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RandomNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Range"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Range"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recall"/>
+        <Class IRI="#PerfomanceMetrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegressionQuality"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegressionQuality"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegularizationStrength"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simple"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simple"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skewness"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skewness"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Solver"/>
+        <Class IRI="#HyperParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sparsity"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sparsity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatTestHomogeneityOfCovariance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatTestHomogeneityOfCovariance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statistical"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statistical"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+            <Class IRI="#MetaFeatures"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StdDevOfAttributes"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StdDevOfAttributes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strength"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strength"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#GraphBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumAverage"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumAverage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumEntropy"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumEntropy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumVariance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SumVariance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ImageBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T1"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T2"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T2"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T3"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T3"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T4"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#T4"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Complexity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeDepth"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeDepth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeImbalance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeImbalance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeShape"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TreeShape"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrimmedMean"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrimmedMean"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VariableImportance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VariableImportance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#ModelBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variance"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WilksLambda"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WilksLambda"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Statistical"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorstNode"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorstNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+            <Class IRI="#Landmarking"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+        <Class IRI="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaObjective"/>
+        <Class IRI="#LearningToOptimize"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaObjective"/>
+        <Class IRI="#LearningToTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaOptimizer"/>
+        <Class IRI="#LearningToOptimize"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaOptimizer"/>
+        <Class IRI="#LearningToTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaRepresentation"/>
+        <Class IRI="#LearningToOptimize"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaRepresentation"/>
+        <Class IRI="#LearningToTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inCategory"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Category"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/dqv#inDimension"/>
+        <Class IRI="http://www.w3.org/ns/dqv#Dimension"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageFeatureEntropy</IRI>
+        <Literal>This is equivalent to AttributeEntropy mean = MFE:attrEntropy.mean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio</IRI>
+        <Literal>Noise ratio, which describes the amount of irrelevant information contained in the dataset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio</IRI>
+        <Literal>MFE:nsRatio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures</IRI>
+        <Literal>Number of Categorial features</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures</IRI>
+        <Literal>MFE:nrCat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures</IRI>
+        <Literal>Number of attributes/features</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures</IRI>
+        <Literal>MFE: nrAttr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances</IRI>
+        <Literal>Number of Instances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances</IRI>
+        <Literal>MFE:nrInst</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstancesPerFeature</IRI>
+        <Literal>MFE:instToAttr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/dqv#inDimension</IRI>
+        <Literal>Relates a data characteristic/quality metric to its corresponding dimension.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActivationFunction</IRI>
+        <Literal>Activation function for hidden layers (e.g., ‘relu’, ‘tanh’, ‘logistic’).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Assortativity</IRI>
+        <Literal>Refers to the Pearson correlation coefficient of degree between pairs of connected vertices. Positive assortative values reveal a correlation between vertices of similar degree, while negative values expose relationships between vertices of different degree.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Assortativity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AttributeConcentration</IRI>
+        <Literal>Attributes concentration. It is the Goodman and Kruskal&apos;s tau measure otherwise known as the concentration coefficient computed for each pair of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AttributeConcentration</IRI>
+        <Literal>MFE:attrConc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AttributesEntropy</IRI>
+        <Literal>Attributes entropy, a measure of randomness of each attribute in the dataset (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AttributesEntropy</IRI>
+        <Literal>MFE:attrEnt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AuthorityScore</IRI>
+        <Literal>The authority scores of the vertices correspond to the principal eigenvector of 
+A(t) * A, in which  is the adjacency matrix of the graph and  A(t)  is its transpose. A vertex has a high authority score if many vertices with high hub scores point to it. Hence, good hubs are those which point to many good authorities and good authorities are those pointed to by many good hubs. For undirected graphs, the adjacency matrix A  is symmetric and the authority scores are the same as hub scores. The measure used to calculate the authority scores in weighted graphs interprets the vertex edge weights as connection strengths. Thus, we can argue that a vertex is important because it links to other important vertices through edges with high weights. 
+
+MultiValued: Min, Max, Average, EighenValue.
+
+ This is also computed for weighted graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AuthorityScore</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BatchSize</IRI>
+        <Literal>Size of mini-batches for stochastic optimizers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BestNode</IRI>
+        <Literal>Construct a single decision tree node model induced by the most informative attribute to establish the linear separability (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BetweennessCentrality</IRI>
+        <Literal>The betweenness centrality for each vertex is the number of geodesics (shortest paths) that pass through the vertex.	
+
+Multi-valued: Min, Max, Average, Median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#BetweennessCentrality</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#BoundaryComplexity</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#C1</IRI>
+        <Literal>Entropy of class proportions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#C2</IRI>
+        <Literal>Multi-class imbalance ratio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CanonicalCorrelation</IRI>
+        <Literal>Canonical correlations between the predictive attributes and the class (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CanonicalCorrelation</IRI>
+        <Literal>MFE:canCor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassConcentration</IRI>
+        <Literal>Class concentration, similar to &quot;attrConc&quot;, however, it is computed for each attribute and the class (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClassConcentration</IRI>
+        <Literal>MFE:classConc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassEntropy</IRI>
+        <Literal>Class entropy, which describes how much information is necessary to specify the class in the dataset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClassEntropy</IRI>
+        <Literal>MFE:classEnt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClassImbalance</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClassOverlap</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClosenessCentrality</IRI>
+        <Literal>Closeness centrality is a measure computed for each vertex of the graph. It calculates how many steps are needed to access every other vertex from a given vertex.	
+
+Multi-valued: Min, Max, Average, Median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClosenessCentrality</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClusteringCoefficient</IRI>
+        <Literal>The clustering coefficient of a vertex is the ratio of the triangles connected to the vertex and the triples centered on the vertex. It estimates how well connected the neighborhood of the vertex is. The weighted clustering coefficient, in turn, is a measure that combines topological information with the weight distribution of the graph. Here we use the definition by A. Barrat, which considers only weights of edges adjacent to the vertex of interest but not the weights of edges between neighbors of the investigated vertex. 
+
+MultiValued: Min, Max, Average, EigenValue. 
+
+This is also computed for weighted graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ClusteringCoefficient</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Constraint</IRI>
+        <Literal>The constraint measure calculates Burt’s constraint for each vertex of the graph. The main idea is to determine the extent to which a vertex V  is invested in those vertices that are themselves invested in the neighbors of V.
+
+MultiValued: Min, Max, Average, Median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Constraint</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contrast</IRI>
+        <Literal>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Contrast</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Coreness</IRI>
+        <Literal>The k-core of a graph is the largest subgraph where each vertex has at least degree 
+k. The coreness of a vertex is 
+ if it pertains to the k-core but not to the 
+(k+1)-core.
+
+Multivalued: Min, Max, Average, Median, Mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Coreness</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Correlation</IRI>
+        <Literal>Absolute attributes correlation, which measures the correlation between each pair of the numeric attributes in the dataset (multi-valued). This measure accepts an extra argument called method = c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Correlation</IRI>
+        <Literal>MFE:cor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CorrelationDegreeCentrality</IRI>
+        <Literal>Corresponds to the correlation between the degree of the graph and the subgraph centrality of the vertices. The subgraph centrality of a vertex computes the number of subgraphs a vertex participates in, weighting them according to their size.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CorrelationDegreeCentrality</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Covariance</IRI>
+        <Literal>Absolute attributes covariance, which measures the covariance between each pair of the numeric attributes in the dataset (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Covariance</IRI>
+        <Literal>MFE:cov</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Degree</IRI>
+        <Literal>Degree is a measure applied for each vertex of the graph. The degree of a vertex is the total number of its adjacent edges.
+
+Multi-valued: Min, Max, Average, Mdeian and mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Degree</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Diameter</IRI>
+        <Literal>The diameter is the maximum geodesic distance between any pair of vertices in the graph. In other words, it is the length of the longest geodesic between any pair of vertices.	
+
+Calculated for weighted graph as well.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Diameter</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Diversity</IRI>
+        <Literal>Diversity is a measure computed for each vertex of the graph. We defined diversity as the Shannon entropy of the weights of its incident edges.	
+
+Multivalued: Min, Max, Average, Median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Diversity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Eccentricity</IRI>
+        <Literal>Eccentricity is a measure applied for each vertex of the graph. The eccentricity of a vertex V  is the maximum distance from V to any vertex. 
+
+Multivalued: Min, Max, Average, Median, and Mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Eccentricity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EdgeDensity</IRI>
+        <Literal>Ratio between the number of edges and the number of possible edges.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EdgeDensity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EigenValues</IRI>
+        <Literal>Eigenvalues of the covariance matrix (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EigenValues</IRI>
+        <Literal>MFE:eigenvalues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EigenVectorCentrality</IRI>
+        <Literal>The eigenvector centrality assigns relative scores to all vertices in the graph based on the concept that connections to high-scoring vertices contribute more to the score of the vertex in question than connections to low-scoring vertices. In general, vertices with high eigenvector centralities are connected to many other vertices, which, in turn, are connected to many others.
+
+ MultiValued: Min, Max, Average, EigenVector. 
+
+This is also computed for weighted graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EigenVectorCentrality</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EliteNNPerformance</IRI>
+        <Literal>Elite nearest neighbor uses the most informative attribute in the dataset to induce the 1-nearest neighbor. With the subset of informative attributes, it is expected that the models should be noise tolerant (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Energy</IRI>
+        <Literal>Measures the textural uniformity based on pixel pair repetitions. High energy values indicate that there are more instances of intensity value pairs in the image that neighbor each other at higher frequencies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Energy</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EqNumberOfAttributes</IRI>
+        <Literal>Equivalent number of attributes, which represents the number of attributes suitable to optimally solve the classification task using the dataset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EqNumberOfAttributes</IRI>
+        <Literal>MFE:eqNumAttr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#F1</IRI>
+        <Literal>Fisher&apos;s discriminant ratio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#F1v</IRI>
+        <Literal>The directional-vector Fisher&apos;s discriminant ratio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#F2</IRI>
+        <Literal>Overlapping of the per-class bounding boxes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#F3</IRI>
+        <Literal>Maximum individual feature efficiency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#F4</IRI>
+        <Literal>Collective feature efficiency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FrequencyClass</IRI>
+        <Literal>MFE:freqClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gamma</IRI>
+        <Literal>Kernel coefficient for ‘rbf’, ‘poly’, and ‘sigmoid’.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GeometricMean</IRI>
+        <Literal>Geometric mean of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#GeometricMean</IRI>
+        <Literal>MFE:gMean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gravity</IRI>
+        <Literal>Center of gravity, which is the distance between the instance in the center of the majority class and the instance-center of the minority class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Gravity</IRI>
+        <Literal>MFE:gravity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HarmonicMean</IRI>
+        <Literal>Harmonic mean of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#HarmonicMean</IRI>
+        <Literal>MFE:hMean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgCorrelation</IRI>
+        <Literal>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgCorrelation</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgDiffEntropy</IRI>
+        <Literal>Measures the disorder associated with the gray level difference distribution of the image.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgDiffEntropy</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgDiffVariance</IRI>
+        <Literal>This descriptor is a measure of heterogeneity that assigns higher weights on differing intensity level pairs which deviate more from the mean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgDiffVariance</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgEntropy</IRI>
+        <Literal>It measures the complexity or disorder of an image. A high entropy value results from an image that is not texturally uniform.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgEntropy</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgHomogeneity</IRI>
+        <Literal>Measures image homogeneity as it assumes larger values for smaller gray tone differences in pair elements. In terms of GLCM, homogeneity decreases if contrast increases while energy is kept constant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgHomogeneity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImgVariance</IRI>
+        <Literal>This descriptor is a measure of heterogeneity. Variance increases when the gray level values differ from their mean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ImgVariance</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InformationalMeasureCorrelation</IRI>
+        <Literal>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#InformationalMeasureCorrelation</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InterquartileRange</IRI>
+        <Literal>Interquartile range of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#InterquartileRange</IRI>
+        <Literal>MFE:iqRange</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#JointEntropy</IRI>
+        <Literal>Joint entropy, which represents the total entropy of each attribute and the class (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#JointEntropy</IRI>
+        <Literal>MFE:jointEnt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kernel</IRI>
+        <Literal>Type of kernel (e.g., ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kurtosis</IRI>
+        <Literal>Kurtosis of attributes (multi-valued)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Kurtosis</IRI>
+        <Literal>MFE:kurtosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#L1</IRI>
+        <Literal>Distance of erroneous instances to a linear classifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#L2</IRI>
+        <Literal>Training error of a linear classifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#L3</IRI>
+        <Literal>Nonlinearity of a linear classifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LSC</IRI>
+        <Literal>Local-Set cardinality average.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LabelNoise</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LearningRate</IRI>
+        <Literal>Learning rate for weight updates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Leaves</IRI>
+        <Literal>Number of leaves of the DT model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Leaves</IRI>
+        <Literal>MFE:leaves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LeavesBranch</IRI>
+        <Literal>Size of branches, which consists in the level of all leaves of the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LeavesBranch</IRI>
+        <Literal>MFE:leavesBranch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LeavesCorroboration</IRI>
+        <Literal>Leaves corroboration, which is the proportion of examples that belong to each leaf of the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LeavesCorroboration</IRI>
+        <Literal>MFE:leavesCorrob</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LeavesHomogeneiy</IRI>
+        <Literal>Homogeneity, which is the number of leaves divided by the structural shape of the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LeavesHomogeneiy</IRI>
+        <Literal>MFE:leavesHomo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LeavesPerClass</IRI>
+        <Literal>Leaves per class, which is the proportion of leaves of the DT model associated with each class (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LeavesPerClass</IRI>
+        <Literal>MFE:leavesPerClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LinearDiscriminantClassifier</IRI>
+        <Literal>Apply the Linear Discriminant classifier to construct a linear split (non-parallel axis) in the data to establish the linear separability (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LocalScan</IRI>
+        <Literal>The scan statistic is a summary of the locality statistics that is computed from the local neighborhood of each vertex.
+
+Multivalued: Min, Max, Average, Median and Mode.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LocalScan</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaxDepth</IRI>
+        <Literal>Maximum depth of the tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaxFeatures</IRI>
+        <Literal>Number of features to consider when looking for the best split.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaxIterations</IRI>
+        <Literal>Number of iterations for optimization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaximalCorrelationCoefficient</IRI>
+        <Literal>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MaximalCorrelationCoefficient</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaximumOfAttributes</IRI>
+        <Literal>Maximum value of attributes (multi-valued)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MaximumOfAttributes</IRI>
+        <Literal>MFE:max</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeanOfAttributes</IRI>
+        <Literal>Mean value of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MeanOfAttributes</IRI>
+        <Literal>MFE:mean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedianAbsoluteDeviation</IRI>
+        <Literal>Median absolute deviation of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MedianAbsoluteDeviation</IRI>
+        <Literal>MFE:mad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedianOfAttributes</IRI>
+        <Literal>Median value of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MedianOfAttributes</IRI>
+        <Literal>MFE:median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MinSamplesLeaf</IRI>
+        <Literal>Minimum number of samples required to be at a leaf node.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MinSamplesSplit</IRI>
+        <Literal>Minimum number of samples required to split an internal node.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MinimumOfAttributes</IRI>
+        <Literal>Minimum value of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MinimumOfAttributes</IRI>
+        <Literal>MFE:min</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MissingValueAnalysis</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Modularity</IRI>
+        <Literal>Corresponds to the modularity score, i.e., how modular is a given division of a graph into subgraphs (communities). A simple way to detect communities is through the use of the fast greedy modularity optimization algorithm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Modularity</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MutualInformation</IRI>
+        <Literal>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MutualInformation</IRI>
+        <Literal>MFE:mutInf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#N1</IRI>
+        <Literal>Fraction of points lying on the class boundary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#N2</IRI>
+        <Literal>Average intra/inter class nearest neighbor distances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#N3</IRI>
+        <Literal>Leave-one-out error rate of the 1-nearest neighbor algorithm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#N4</IRI>
+        <Literal>Nonlinearity of the one-nearest neighbor classifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NaiveBayesPerfomance</IRI>
+        <Literal>Evaluate the performance of the Naive Bayes classifier. It assumes that the attributes are independent and each example belongs to a certain class based on the Bayes probability (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nodes</IRI>
+        <Literal>Number of nodes of the DT model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Nodes</IRI>
+        <Literal>MFE:nodes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NodesPerAttributes</IRI>
+        <Literal>Ratio of the number of nodes of the DT model per the number of attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NodesPerAttributes</IRI>
+        <Literal>MFE:nodesPerAttr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NodesPerInstances</IRI>
+        <Literal>Ratio of the number of nodes of the DT model per the number of attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NodesPerInstances</IRI>
+        <Literal>MFE:nodesPerInst</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NodesPerLevel</IRI>
+        <Literal>Number of nodes of the DT model per level (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NodesPerLevel</IRI>
+        <Literal>MFE:nodesPerLevel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NodesRepeated</IRI>
+        <Literal>Repeated nodes, which is the number of repeated attributes that appear in the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NodesRepeated</IRI>
+        <Literal>MFE:nodesRepeated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfAttrwithNormalDistribution</IRI>
+        <Literal>Number of attributes with normal distribution. The Shapiro-Wilk Normality Test is used to assess if an attribute is normally distributed (multi-valued only when by.class=TRUE).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfAttrwithNormalDistribution</IRI>
+        <Literal>MFE:nrNorm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfBinaryAttributes</IRI>
+        <Literal>MFE:neBin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfClasses</IRI>
+        <Literal>MFE:nrClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfClusters</IRI>
+        <Literal>Number of clusters to form and the number of centroids to generate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfCommunities</IRI>
+        <Literal>Indicates the number of dense subgraphs (communities) in a graph. We can find community structures employing the fast greedy modularity optimization algorithm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfCommunities</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfDiscriminantFunctions</IRI>
+        <Literal>Number of the discriminant functions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfDiscriminantFunctions</IRI>
+        <Literal>MFE: nrDisc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfEdges</IRI>
+        <Literal>Property associated with the size of the graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfEdges</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfEpochs</IRI>
+        <Literal>Number of iterations over the training data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfGroups</IRI>
+        <Literal>Refers to the number of clusters (groups of vertices) found. We can perform clustering by calculating the maximal connected components of the graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfGroups</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfHighlyCorrelatedAttributes</IRI>
+        <Literal>Number of attribute pairs with high correlation (multi-valued when by.class=TRUE).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfHighlyCorrelatedAttributes</IRI>
+        <Literal>MFE:nrCorAttr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfLayers</IRI>
+        <Literal>Number of hidden layers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfNeuronsPerLayer</IRI>
+        <Literal>Number of neurons in each hidden layer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfOutliers</IRI>
+        <Literal>Number of attributes with outlier values. Turkey&apos;s boxplot algorithm is used to compute if an attribute has or does not have outliers (multi-valued only when by.class=TRUE).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfOutliers</IRI>
+        <Literal>MFE:nrOutliers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NumberOfTriangles</IRI>
+        <Literal>Given a graph, it counts how many triangles each vertex is part of.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberOfTriangles</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#NumberofNumericAttributes</IRI>
+        <Literal>MFE:nrNum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OneNNPerformance</IRI>
+        <Literal>Evaluate the performance of the 1-nearest neighbor classifier. It uses the Euclidean distance of the nearest neighbor to determine how noisy the data is (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#OutlierDetection</IRI>
+        <Literal>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PageRank</IRI>
+        <Literal>Google’s PageRank is a variant of eigenvector centrality that assigns a numeric weight to each vertex in the graph, intending to estimate its relative importance within the set of vertices. We can compute it by either iteratively distributing one vertex’s rank – originally based on degree – over its neighbors or by randomly traversing the graph and counting the frequency of hitting each vertex during these walks. The links are also weighted depending on the relative score of its originating node. The result is that vertices with several incoming links are influential, and nodes to which they are linked share some of that influence. 
+
+Multivalued: Min, Max, Average and Median. This is also computed for weighted graph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#PageRank</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Penalty</IRI>
+        <Literal>Type of regularization (e.g., L1, L2)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ProportionOfAttrToInstances</IRI>
+        <Literal>MFE:attrToInst</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ProportionOfCatToNumeric</IRI>
+        <Literal>MFE:catToNum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ProportionOfNumToCategoricalAttributes</IRI>
+        <Literal>MFE:numToCat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RandomNode</IRI>
+        <Literal>Construct a single decision tree node model induced by a random attribute. The combination with the &quot;bestNode&quot; measure can establish the linear separability (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Range</IRI>
+        <Literal>Range of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Range</IRI>
+        <Literal>MFE:range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Simple</IRI>
+        <Literal>Simple meta-features include general information related to the dataset. It is also known as general measures.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Skewness</IRI>
+        <Literal>Skewness of attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Skewness</IRI>
+        <Literal>MFE:skewness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Solver</IRI>
+        <Literal>Algorithm to use for optimization (e.g., ‘liblinear’, ‘saga’)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sparsity</IRI>
+        <Literal>Attributes sparsity, which represents the degree of discreetness of each attribute in the dataset (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Sparsity</IRI>
+        <Literal>MFE:sparsity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StatTestHomogeneityOfCovariance</IRI>
+        <Literal>Statistic test for homogeneity of covariances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#StatTestHomogeneityOfCovariance</IRI>
+        <Literal>MFE:sdRatio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StdDevOfAttributes</IRI>
+        <Literal>Standard deviation of the attributes (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#StdDevOfAttributes</IRI>
+        <Literal>MFE:sd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Strength</IRI>
+        <Literal>Strength (or degree for the unweighted version) is a measure computed for each vertex of the graph. The strength of a vertex is the total sum of the weights of its adjacent edges.	
+
+
+Multi-valued: Min, Max, Average, Median</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Strength</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SumAverage</IRI>
+        <Literal>Measures the relationship between occurrences of pairs with lower intensity values and occurrences of pairs with higher intensity values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SumAverage</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SumEntropy</IRI>
+        <Literal>It is a sum of neighborhood intensity value differences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SumEntropy</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SumVariance</IRI>
+        <Literal>This descriptor is a measure of heterogeneity that assigns higher weights on neighboring intensity level pairs which deviate more from the mean.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SumVariance</IRI>
+        <Literal>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#T1</IRI>
+        <Literal>Fraction of maximum covering spheres on data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#T2</IRI>
+        <Literal>Average number of samples per dimension.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#T3</IRI>
+        <Literal>Average intrinsic dimensionality per number of examples.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#T4</IRI>
+        <Literal>Intrinsic dimensionality proportion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TreeDepth</IRI>
+        <Literal>Tree depth, which is the level of all tree nodes and leaves of the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TreeDepth</IRI>
+        <Literal>MFE:treeDepth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TreeImbalance</IRI>
+        <Literal>Tree imbalance (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TreeImbalance</IRI>
+        <Literal>MFE:treeImbalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TreeShape</IRI>
+        <Literal>Tree shape, which is the probability of arriving in each leaf given a random walk. We call this the structural shape of the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TreeShape</IRI>
+        <Literal>MFE:treeShape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TrimmedMean</IRI>
+        <Literal>Trimmed mean of attributes (multi-valued). It is the arithmetic mean excluding the 20% of the lowest and highest instances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TrimmedMean</IRI>
+        <Literal>MFE:tMean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VariableImportance</IRI>
+        <Literal>Variable importance. It is calculated using the Gini index to estimate the amount of information used in the DT model (multi-valued).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#VariableImportance</IRI>
+        <Literal>MFE:varImportance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Variance</IRI>
+        <Literal>Attributes variance (multi-valued)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Variance</IRI>
+        <Literal>MFE: var</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WilksLambda</IRI>
+        <Literal>Wilks Lambda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#WilksLambda</IRI>
+        <Literal>MFE: wLambda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorstNode</IRI>
+        <Literal>Construct a single decision tree node model induced by the worst informative attribute. The combination with the &quot;bestNode&quot; measure can establish the linear separability (multi-valued).</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
