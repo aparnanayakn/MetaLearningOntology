@@ -196,13 +196,19 @@
 
     <!-- https://purl.archive.org/domain/mtl#hasLowerValue -->
 
-    <owl:DatatypeProperty rdf:about="https://purl.archive.org/domain/mtl#hasLowerValue"/>
+    <owl:DatatypeProperty rdf:about="https://purl.archive.org/domain/mtl#hasLowerValue">
+        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://purl.archive.org/domain/mtl#hasUpperValue -->
 
-    <owl:DatatypeProperty rdf:about="https://purl.archive.org/domain/mtl#hasUpperValue"/>
+    <owl:DatatypeProperty rdf:about="https://purl.archive.org/domain/mtl#hasUpperValue">
+        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
     
 
 
