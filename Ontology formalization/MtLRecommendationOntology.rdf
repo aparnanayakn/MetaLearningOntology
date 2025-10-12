@@ -5,18 +5,16 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xml:base="https://purl.archive.org/domain/mtl"
          xmlns="https://purl.archive.org/domain/mtl#"
-         xmlns:x_1.1="http://purl.org/dc/elements/1.1/"
-         xmlns:DMOP="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#"
-         xmlns:DMOP2="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#">
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
 
 <owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
   <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
   <rdfs:comment>Meta-learning, often referred to as "learning to learn," is an emerging paradigm in machine learning that focuses on improving the ability of models to adapt to new tasks quickly with limited data. This approach leverages previous experiences to enhance learning processes, enabling models to generalise better across diverse tasks. The purpose of developing a meta-learning ontology is to create a formal and standardised representation of the concepts, relationships, and approaches in this field. This will enable a better organised and compatible framework for study and application.</rdfs:comment>
-  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
-  <x_1.1:contributor>Bojan Bozic</x_1.1:contributor>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</owl:versionInfo>
   <x_1.1:contributor>Luca Longo</x_1.1:contributor>
   <x_1.1:creator>Aparna Nayak</x_1.1:creator>
-  <x_1.1:title>Meta-Learning Ontology</x_1.1:title>
+  <x_1.1:rights>https://creativecommons.org/licenses/by-nc/4.0/</x_1.1:rights>
+  <x_1.1:title>Meta Learning Ontology</x_1.1:title>
 </owl:Ontology>
 
 <owl:ObjectProperty rdf:about="#hasQuality">
@@ -45,6 +43,16 @@
   <rdfs:domain rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
   <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
   <rdfs:comment>Relates a data characteristic/quality metric to its corresponding dimension.</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasExecutionTime">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant"/>
+  <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low-Medium-High"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasFeatureCount">
+  <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FeatureSelectionAlgorithm"/>
+  <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low-Medium-High"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#hasRootCause">
@@ -107,6 +115,20 @@
     </rdfs:Datatype>
   </rdfs:range>
 </owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/termscontributor"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/termscreator"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/termslicense"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/termsrights"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/termstitle"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
 
 <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
 
@@ -429,6 +451,26 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
 
 <owl:Class rdf:about="#ChisquareRecommendation">
   <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasExecutionTime"/>
+      <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
   <rdfs:subClassOf>
     <owl:Restriction>
       <owl:onProperty rdf:resource="#recommends"/>
@@ -928,6 +970,26 @@ This is also computed for weighted graph.</rdfs:comment>
 <owl:Class rdf:about="#FCBFRecommendation">
   <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
   <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasExecutionTime"/>
+      <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
     <owl:Restriction>
       <owl:onProperty rdf:resource="#recommends"/>
       <owl:hasValue rdf:resource="#FCBF"/>
@@ -937,6 +999,32 @@ This is also computed for weighted graph.</rdfs:comment>
 
 <owl:Class rdf:about="#FSTechniques">
   <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FastCorrelationBasedFilter">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasExecutionTime"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FeatureSelectionRecommendationTask">
@@ -958,6 +1046,26 @@ This is also computed for weighted graph.</rdfs:comment>
 
 <owl:Class rdf:about="#GRRecommendation">
   <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#High"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasExecutionTime"/>
+      <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
   <rdfs:subClassOf>
     <owl:Restriction>
       <owl:onProperty rdf:resource="#recommends"/>
@@ -1403,11 +1511,54 @@ Multivalued: Min, Max, Average, Median and Mode.</rdfs:comment>
 <owl:Class rdf:about="#MIRecommendation">
   <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
   <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasExecutionTime"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasExecutionTime"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#High"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
     <owl:Restriction>
       <owl:onProperty rdf:resource="#recommends"/>
-      <owl:someValuesFrom rdf:resource="#MutualInformation"/>
+      <owl:hasValue rdf:resource="#MutualInformation"/>
     </owl:Restriction>
   </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#MutualInformation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#FSTechniques"/>
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</rdfs:comment>
+  <rdfs:label>MutualInformation</rdfs:label>
+  <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
 </owl:Class>
 
 <owl:Class rdf:about="#MaxDepth">
@@ -1582,19 +1733,30 @@ Multivalued: Min, Max, Average, Median and Mode.</rdfs:comment>
   <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
 </owl:Class>
 
-<owl:Class rdf:about="#MutualInformation">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FSTechniques"/>
-  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
-      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:comment>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</rdfs:comment>
-  <rdfs:label>MutualInformation</rdfs:label>
-  <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
+<owl:Class rdf:about="#MutualInfo">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasExecutionTime"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#FilterFSAlgorithm"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFeatureCount"/>
+          <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#High"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#N1">
@@ -2085,6 +2247,18 @@ Multivalued: Min, Max, Average and Median. This is also computed for weighted gr
   <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
   <rdfs:subClassOf>
     <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasExecutionTime"/>
+      <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasFeatureCount"/>
+      <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
       <owl:onProperty rdf:resource="#recommends"/>
       <owl:hasValue rdf:resource="#Relief"/>
     </owl:Restriction>
@@ -2291,6 +2465,14 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   <rdfs:label>T4</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="#TimeToSelectFeatures">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#AlgorithmCharacteristic"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TotalFeatures">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#AlgorithmCharacteristic"/>
+</owl:Class>
+
 <owl:Class rdf:about="#TreeDepth">
   <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
   <rdfs:subClassOf>
@@ -2439,61 +2621,11 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:disjointWith rdf:resource="#ReliefConstraintsInstances"/>
 </owl:Class>
 
 <owl:Class rdf:about="#MIConstraintsInstances2">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#MIConstraintsInstances1"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.0</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -2548,60 +2680,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.208</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#MIConstraintsAttr">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.053</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -2656,60 +2738,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-9.286</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#MIConstraintsLabel">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -2764,60 +2796,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefConstraintsNoClasses">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -2872,60 +2854,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.052</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefGMean">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.221</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -2980,60 +2912,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.271</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefConstraintsNoOfOutliers">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.016</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3088,60 +2970,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.425</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefConstraintsENA1">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-38.058</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3196,60 +3028,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#ReliefConstraintsENA1"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.249</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#GRConstraintsInstances2">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#ReliefConstraintsInstances"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">347.0</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3304,60 +3086,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#GRConstrainsTMean">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.271</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3413,31 +3145,6 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.061</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#GRConstraintsENA">
@@ -3467,60 +3174,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-7.065</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsNoClasses">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3576,61 +3233,11 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-9.286</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:disjointWith rdf:resource="#MIConstraintsENA"/>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsConc1">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.219</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3686,60 +3293,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#FCBFConstraintsConc1"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.404</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsEigen">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.208</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3795,60 +3352,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.359</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsIQRange">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.913</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -3903,60 +3410,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.017</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsCEnt">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.724</xsd:minInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -4011,60 +3468,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.209</xsd:maxExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#FCBFConstraintsNoAttr">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</xsd:maxExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -4119,60 +3526,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.219</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ChisquareConstraintsAttrEnt">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.674</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -4228,60 +3585,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.948</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ChisquareConstraintsRange">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.692</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -4336,60 +3643,10 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.065</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#ChisquareConstraintsCEnt1">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.724</xsd:maxInclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -4420,31 +3677,6 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
 
 <owl:Class rdf:about="#ChisquareConstraintsAttrEnt1">
   <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Mean"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
-                    <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.674</xsd:minExclusive>
-                    </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
@@ -5540,6 +4772,15 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   </owl:equivalentClass>
 </owl:Class>
 
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMember">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection"/>
+  <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf">
+  <owl:inverseOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality">
   <owl:equivalentProperty rdf:resource="#hasQuality"/>
 </rdf:Description>
@@ -5631,60 +4872,32 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   </rdfs:subClassOf>
 </rdf:Description>
 
+<TimeToSelectFeatures rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Low">
+  <rdf:type rdf:resource="#TotalFeatures"/>
+</TimeToSelectFeatures>
+
+<TimeToSelectFeatures rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Medium">
+  <rdf:type rdf:resource="#TotalFeatures"/>
+</TimeToSelectFeatures>
+
 <FSTechniques rdf:about="#ChiSquare">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type>
-    <owl:Restriction>
-      <owl:onProperty>
-        <rdf:Description>
-          <owl:inverseOf rdf:resource="#recommends"/>
-        </rdf:Description>
-      </owl:onProperty>
-      <owl:someValuesFrom rdf:resource="#ChisquareRecommendation"/>
-    </owl:Restriction>
-  </rdf:type>
 </FSTechniques>
 
 <FSTechniques rdf:about="#FCBF">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type>
-    <owl:Restriction>
-      <owl:onProperty>
-        <rdf:Description>
-          <owl:inverseOf rdf:resource="#recommends"/>
-        </rdf:Description>
-      </owl:onProperty>
-      <owl:someValuesFrom rdf:resource="#FCBFRecommendation"/>
-    </owl:Restriction>
-  </rdf:type>
 </FSTechniques>
+
+<TimeToSelectFeatures rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#High">
+  <rdf:type rdf:resource="#TotalFeatures"/>
+</TimeToSelectFeatures>
 
 <FSTechniques rdf:about="#GainRatio">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type>
-    <owl:Restriction>
-      <owl:onProperty>
-        <rdf:Description>
-          <owl:inverseOf rdf:resource="#recommends"/>
-        </rdf:Description>
-      </owl:onProperty>
-      <owl:someValuesFrom rdf:resource="#GRRecommendation"/>
-    </owl:Restriction>
-  </rdf:type>
 </FSTechniques>
 
 <FSTechniques rdf:about="#Relief">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type>
-    <owl:Restriction>
-      <owl:onProperty>
-        <rdf:Description>
-          <owl:inverseOf rdf:resource="#recommends"/>
-        </rdf:Description>
-      </owl:onProperty>
-      <owl:someValuesFrom rdf:resource="#ReliefRecommendation"/>
-    </owl:Restriction>
-  </rdf:type>
 </FSTechniques>
 
 <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageAbsoluteFeatureCorrelation">
@@ -5695,1796 +4908,6 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   <rdfs:comment>This is equivalent to AttributeEntropy mean = MFE:attrEntropy.mean</rdfs:comment>
   <rdfs:label>AverageFeatureEntropy</rdfs:label>
 </rdf:Description>
-
-<LearningFromTaskProperties rdf:about="#RaisinDatasetcsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_eigen_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_nunique_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_gmean_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_attrent_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_ena_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_range_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_centropy_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_tmean_feature"/>
-  <hasQuality rdf:resource="#RaisinDatasetcsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#RaisinDatasetcsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#RaisinDatasetcsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#RaisinDatasetcsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#RaisinDatasetcsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#RaisinDatasetcsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#RaisinDatasetcsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#RaisinDatasetcsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">454770088.67152303</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#RaisinDatasetcsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#RaisinDatasetcsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.187278356406852</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#RaisinDatasetcsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#RaisinDatasetcsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#RaisinDatasetcsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#RaisinDatasetcsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.523809523809524</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#RaisinDatasetcsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#RaisinDatasetcsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23651.279433695898</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#RaisinDatasetcsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#RaisinDatasetcsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1699250014423104</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#RaisinDatasetcsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#RaisinDatasetcsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#RaisinDatasetcsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#RaisinDatasetcsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05888888888888901</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#RaisinDatasetcsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#RaisinDatasetcsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.007777777777778001</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#RaisinDatasetcsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#RaisinDatasetcsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66419.7106856469</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#RaisinDatasetcsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#RaisinDatasetcsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#RaisinDatasetcsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#RaisinDatasetcsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#RaisinDatasetcsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#RaisinDatasetcsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002222222222222</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#RaisinDatasetcsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#RaisinDatasetcsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#RaisinDatasetcsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13299.202213055802</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#Hayesrothimbalancecsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_eigen_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_nunique_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_gmean_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_attrent_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_ena_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_range_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_centropy_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_tmean_feature"/>
-  <hasQuality rdf:resource="#Hayesrothimbalancecsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#Hayesrothimbalancecsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#Hayesrothimbalancecsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#Hayesrothimbalancecsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#Hayesrothimbalancecsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">132</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#Hayesrothimbalancecsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.841950034698125</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#Hayesrothimbalancecsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.050746986325329</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#Hayesrothimbalancecsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#Hayesrothimbalancecsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#Hayesrothimbalancecsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.76078673201462</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#Hayesrothimbalancecsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.73724228922257</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#Hayesrothimbalancecsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.55726495690876</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#Hayesrothimbalancecsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.015151515151515</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#Hayesrothimbalancecsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03030303030303</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#Hayesrothimbalancecsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.75</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#Hayesrothimbalancecsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9753883428229371</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#Hayesrothimbalancecsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.409090909090909</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#Hayesrothimbalancecsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#Hayesrothimbalancecsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#Hayesrothimbalancecsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#Hayesrothimbalancecsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.25</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#glass5cn10csv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#glass5cn10csv_nrInst_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_eigen_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_attrconc_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_nunique_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_gmean_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_attrent_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_ena_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_attrinst_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_range_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_centropy_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_conciseness_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_tmean_feature"/>
-  <hasQuality rdf:resource="#glass5cn10csv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#glass5cn10csv"/>
-  <DMOP:specifiesInputClass rdf:resource="#glass5cn10csv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#glass5cn10csv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#glass5cn10csv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#glass5cn10csv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#glass5cn10csv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#glass5cn10csv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.702795788080073</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#glass5cn10csv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#glass5cn10csv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.086505485281542</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#glass5cn10csv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#glass5cn10csv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#glass5cn10csv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#glass5cn10csv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.055555555555556</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#glass5cn10csv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#glass5cn10csv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.8643538472947</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#glass5cn10csv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#glass5cn10csv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0174119113784</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#glass5cn10csv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#glass5cn10csv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-1.5756241480749198</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#glass5cn10csv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#glass5cn10csv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.009345794392523001</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#glass5cn10csv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#glass5cn10csv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.042056074766355006</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#glass5cn10csv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#glass5cn10csv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.511419999999999</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#glass5cn10csv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#glass5cn10csv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8419982850006479</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#glass5cn10csv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#glass5cn10csv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.004672897196262</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#glass5cn10csv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#glass5cn10csv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#glass5cn10csv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.009345794392523001</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#glass5cn10csv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#glass5cn10csv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#glass5cn10csv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5719349205555551</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#cervicalbehaviourcsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_eigen_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_nunique_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_gmean_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_attrent_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_ena_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_range_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_centropy_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_tmean_feature"/>
-  <hasQuality rdf:resource="#cervicalbehaviourcsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#cervicalbehaviourcsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#cervicalbehaviourcsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#cervicalbehaviourcsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#cervicalbehaviourcsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#cervicalbehaviourcsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#cervicalbehaviourcsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#cervicalbehaviourcsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.5948851000741</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#cervicalbehaviourcsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#cervicalbehaviourcsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.11513728405747502</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#cervicalbehaviourcsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#cervicalbehaviourcsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#cervicalbehaviourcsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#cervicalbehaviourcsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.157894736842105</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#cervicalbehaviourcsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#cervicalbehaviourcsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.30472762387419</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#cervicalbehaviourcsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#cervicalbehaviourcsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.58597945006179</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#cervicalbehaviourcsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#cervicalbehaviourcsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.633771234479849</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#cervicalbehaviourcsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#cervicalbehaviourcsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.027777777777778</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#cervicalbehaviourcsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#cervicalbehaviourcsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.263888888888889</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#cervicalbehaviourcsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#cervicalbehaviourcsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0526315789474</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#cervicalbehaviourcsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#cervicalbehaviourcsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8708644692353641</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#cervicalbehaviourcsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#cervicalbehaviourcsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#cervicalbehaviourcsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#cervicalbehaviourcsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#cervicalbehaviourcsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#cervicalbehaviourcsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#cervicalbehaviourcsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.592105263157901</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#breastcancerwdbcdata">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_nrInst_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_eigen_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_attrconc_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_nunique_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_gmean_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_attrent_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_ena_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_attrinst_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_range_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_centropy_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_conciseness_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_tmean_feature"/>
-  <hasQuality rdf:resource="#breastcancerwdbcdata_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#breastcancerwdbcdata"/>
-  <DMOP:specifiesInputClass rdf:resource="#breastcancerwdbcdata"/>
-  <DMOP:specifiesOutputClass rdf:resource="#breastcancerwdbcdata"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#breastcancerwdbcdata_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#breastcancerwdbcdata_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">568</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#breastcancerwdbcdata_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#breastcancerwdbcdata_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">505037826112719.0</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#breastcancerwdbcdata_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#breastcancerwdbcdata_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08795676027591201</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#breastcancerwdbcdata_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#breastcancerwdbcdata_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#breastcancerwdbcdata_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#breastcancerwdbcdata_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.30752688172042997</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#breastcancerwdbcdata_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#breastcancerwdbcdata_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">73132.1764432069</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#breastcancerwdbcdata_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#breastcancerwdbcdata_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.9999526642445296</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#breastcancerwdbcdata_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#breastcancerwdbcdata_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.908034359016443</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#breastcancerwdbcdata_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#breastcancerwdbcdata_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.052816901408450995</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#breastcancerwdbcdata_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#breastcancerwdbcdata_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.054577464788731996</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#breastcancerwdbcdata_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_range_mean"/>
-</Range>
-
-<Mean rdf:about="#breastcancerwdbcdata_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29397396.4336399</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#breastcancerwdbcdata_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#breastcancerwdbcdata_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9518008464842521</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#breastcancerwdbcdata_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#breastcancerwdbcdata_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#breastcancerwdbcdata_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#breastcancerwdbcdata_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#breastcancerwdbcdata_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#breastcancerwdbcdata_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#breastcancerwdbcdata_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">256672.43447271</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#4yearcsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#4yearcsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_eigen_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_nunique_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_gmean_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_attrent_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_ena_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_range_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_centropy_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_tmean_feature"/>
-  <hasQuality rdf:resource="#4yearcsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#4yearcsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#4yearcsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#4yearcsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#4yearcsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#4yearcsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9792</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#4yearcsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#4yearcsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">519931736.5457</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#4yearcsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#4yearcsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.031307395824637006</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#4yearcsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#4yearcsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#4yearcsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#4yearcsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.074404761904762</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#4yearcsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#4yearcsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#4yearcsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#4yearcsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.31383754553709</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#4yearcsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#4yearcsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.17461561884812998</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#4yearcsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#4yearcsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.00020424836601299996</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#4yearcsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#4yearcsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.006535947712418001</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#4yearcsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#4yearcsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">604363.2224380961</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#4yearcsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#4yearcsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.297315336261856</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#4yearcsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#4yearcsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.008374183006536</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#4yearcsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#4yearcsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#4yearcsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0055147058823530005</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#4yearcsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#4yearcsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#4yearcsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">116.409511283906</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#ObesityDataSetrawanddatasintheticcsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_eigen_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nunique_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_gmean_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrent_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_ena_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_range_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_centropy_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_tmean_feature"/>
-  <hasQuality rdf:resource="#ObesityDataSetrawanddatasintheticcsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#ObesityDataSetrawanddatasintheticcsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#ObesityDataSetrawanddatasintheticcsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#ObesityDataSetrawanddatasintheticcsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#ObesityDataSetrawanddatasintheticcsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2111</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#ObesityDataSetrawanddatasintheticcsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.70375905975799</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.030732680250383997</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#ObesityDataSetrawanddatasintheticcsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#ObesityDataSetrawanddatasintheticcsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.016666666666667</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#ObesityDataSetrawanddatasintheticcsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.163085591930081</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.84055218887943</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#ObesityDataSetrawanddatasintheticcsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-11.310227521726</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#ObesityDataSetrawanddatasintheticcsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.000947418285173</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.007579346281383</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#ObesityDataSetrawanddatasintheticcsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.033125</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#ObesityDataSetrawanddatasintheticcsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9982953866102059</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#ObesityDataSetrawanddatasintheticcsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.011369019422075001</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#ObesityDataSetrawanddatasintheticcsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.011842728564661</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#ObesityDataSetrawanddatasintheticcsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#ObesityDataSetrawanddatasintheticcsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#ObesityDataSetrawanddatasintheticcsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4327908125</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#divorcecsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#divorcecsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_eigen_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_nunique_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_gmean_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_attrent_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_ena_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_range_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_centropy_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_tmean_feature"/>
-  <hasQuality rdf:resource="#divorcecsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#divorcecsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#divorcecsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#divorcecsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#divorcecsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#divorcecsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#divorcecsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#divorcecsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3707345528612502</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#divorcecsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#divorcecsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.305795074387585</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#divorcecsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#divorcecsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#divorcecsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#divorcecsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8909853249475891</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#divorcecsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#divorcecsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#divorcecsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#divorcecsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.79756826587899</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#divorcecsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#divorcecsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-1.32228160737971</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#divorcecsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#divorcecsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.011764705882353</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#divorcecsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#divorcecsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.317647058823529</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#divorcecsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#divorcecsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#divorcecsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#divorcecsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9999001572094879</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#divorcecsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#divorcecsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.11764705882352902</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#divorcecsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#divorcecsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#divorcecsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0058823529411759995</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#divorcecsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#divorcecsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#divorcecsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.11111111111111</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#balancescaleimbalancedcsv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_nrInst_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_eigen_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_attrconc_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_nunique_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_gmean_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_attrent_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_ena_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_attrinst_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_range_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_centropy_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_conciseness_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_tmean_feature"/>
-  <hasQuality rdf:resource="#balancescaleimbalancedcsv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#balancescaleimbalancedcsv"/>
-  <DMOP:specifiesInputClass rdf:resource="#balancescaleimbalancedcsv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#balancescaleimbalancedcsv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#balancescaleimbalancedcsv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">625</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#balancescaleimbalancedcsv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.00320512820513</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#balancescaleimbalancedcsv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-6.25e-08</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#balancescaleimbalancedcsv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#balancescaleimbalancedcsv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#balancescaleimbalancedcsv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.60517108469735</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#balancescaleimbalancedcsv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3219280948873595</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#balancescaleimbalancedcsv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-1.67703973493132</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#balancescaleimbalancedcsv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0032</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#balancescaleimbalancedcsv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0064</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#balancescaleimbalancedcsv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#balancescaleimbalancedcsv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8316387585459221</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#balancescaleimbalancedcsv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#balancescaleimbalancedcsv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0016</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#balancescaleimbalancedcsv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#balancescaleimbalancedcsv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#balancescaleimbalancedcsv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasDatavalue>
-</Mean>
-
-<LearningFromTaskProperties rdf:about="#vehicle3csv">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendationTask"/>
-  <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-  <rdf:type rdf:resource="#FeatureSelectionRecommendation"/>
-  <hasQuality rdf:resource="#vehicle3csv_nrInst_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_eigen_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_attrconc_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_nunique_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_nrcorattr_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_gmean_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_attrent_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_ena_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_labelissuesperc_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_attrinst_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_range_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_centropy_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_conciseness_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_tmean_feature"/>
-  <hasQuality rdf:resource="#vehicle3csv_iqrmean_feature"/>
-  <DMOP:addresses rdf:resource="#vehicle3csv"/>
-  <DMOP:specifiesInputClass rdf:resource="#vehicle3csv"/>
-  <DMOP:specifiesOutputClass rdf:resource="#vehicle3csv"/>
-</LearningFromTaskProperties>
-
-<DMOP2:NumberOfInstances rdf:about="#vehicle3csv_nrInst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_nrInst_mean"/>
-</DMOP2:NumberOfInstances>
-
-<Mean rdf:about="#vehicle3csv_nrInst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">846</hasDatavalue>
-</Mean>
-
-<EigenValues rdf:about="#vehicle3csv_eigen_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_eigen_mean"/>
-</EigenValues>
-
-<Mean rdf:about="#vehicle3csv_eigen_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2025.5889786488</hasDatavalue>
-</Mean>
-
-<AttributeConcentration rdf:about="#vehicle3csv_attrconc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_attrconc_mean"/>
-</AttributeConcentration>
-
-<Mean rdf:about="#vehicle3csv_attrconc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.121223051487699</hasDatavalue>
-</Mean>
-
-<NumberOfClasses rdf:about="#vehicle3csv_nunique_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_nunique_mean"/>
-</NumberOfClasses>
-
-<Mean rdf:about="#vehicle3csv_nunique_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDatavalue>
-</Mean>
-
-<NumberOfHighlyCorrelatedAttributes rdf:about="#vehicle3csv_nrcorattr_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_nrcorattr_mean"/>
-</NumberOfHighlyCorrelatedAttributes>
-
-<Mean rdf:about="#vehicle3csv_nrcorattr_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3921568627450979</hasDatavalue>
-</Mean>
-
-<GeometricMean rdf:about="#vehicle3csv_gmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_gmean_mean"/>
-</GeometricMean>
-
-<Mean rdf:about="#vehicle3csv_gmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">113.838670848547</hasDatavalue>
-</Mean>
-
-<AttributesEntropy rdf:about="#vehicle3csv_attrent_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_attrent_mean"/>
-</AttributesEntropy>
-
-<Mean rdf:about="#vehicle3csv_attrent_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0929297541798197</hasDatavalue>
-</Mean>
-
-<EqNumberOfAttributes rdf:about="#vehicle3csv_ena_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_ena_mean"/>
-</EqNumberOfAttributes>
-
-<Mean rdf:about="#vehicle3csv_ena_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.404615553699556</hasDatavalue>
-</Mean>
-
-<LabelNoise rdf:about="#vehicle3csv_labelissuesperc_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_labelissuesperc_mean"/>
-</LabelNoise>
-
-<Mean rdf:about="#vehicle3csv_labelissuesperc_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002364066193853</hasDatavalue>
-</Mean>
-
-<ProportionOfAttrToInstances rdf:about="#vehicle3csv_attrinst_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_attrinst_mean"/>
-</ProportionOfAttrToInstances>
-
-<Mean rdf:about="#vehicle3csv_attrinst_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.021276595744681</hasDatavalue>
-</Mean>
-
-<Range rdf:about="#vehicle3csv_range_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_range_mean"/>
-</Range>
-
-<Mean rdf:about="#vehicle3csv_range_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.5</hasDatavalue>
-</Mean>
-
-<ClassEntropy rdf:about="#vehicle3csv_centropy_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_centropy_mean"/>
-</ClassEntropy>
-
-<Mean rdf:about="#vehicle3csv_centropy_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9507463868971651</hasDatavalue>
-</Mean>
-
-<Conciseness rdf:about="#vehicle3csv_conciseness_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_conciseness_mean"/>
-</Conciseness>
-
-<Mean rdf:about="#vehicle3csv_conciseness_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasDatavalue>
-</Mean>
-
-<TrimmedMean rdf:about="#vehicle3csv_tmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Skewness"/>
-  <rdf:type rdf:resource="#Mean"/>
-  <rdf:type rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures"/>
-  <rdf:type rdf:resource="#OutlierDetection"/>
-  <qlocation rdf:resource="#vehicle3csv_tmean_mean"/>
-</TrimmedMean>
-
-<Mean rdf:about="#vehicle3csv_tmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.018912529550828</hasDatavalue>
-</Mean>
-
-<InterquartileRange rdf:about="#vehicle3csv_iqrmean_feature">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <qlocation rdf:resource="#vehicle3csv_iqrmean_mean"/>
-</InterquartileRange>
-
-<Mean rdf:about="#vehicle3csv_iqrmean_mean">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasDatavalue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.5694444444444</hasDatavalue>
-</Mean>
 
 
 </rdf:RDF>
