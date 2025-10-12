@@ -5,16 +5,16 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xml:base="https://purl.archive.org/domain/mtl"
          xmlns="https://purl.archive.org/domain/mtl#"
-         xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
 
 <owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
   <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
   <rdfs:comment>Meta-learning, often referred to as "learning to learn," is an emerging paradigm in machine learning that focuses on improving the ability of models to adapt to new tasks quickly with limited data. This approach leverages previous experiences to enhance learning processes, enabling models to generalise better across diverse tasks. The purpose of developing a meta-learning ontology is to create a formal and standardised representation of the concepts, relationships, and approaches in this field. This will enable a better organised and compatible framework for study and application.</rdfs:comment>
   <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</owl:versionInfo>
-  <x_1.1:contributor>Luca Longo</x_1.1:contributor>
-  <x_1.1:creator>Aparna Nayak</x_1.1:creator>
-  <x_1.1:rights>https://creativecommons.org/licenses/by-nc/4.0/</x_1.1:rights>
-  <x_1.1:title>Meta Learning Ontology</x_1.1:title>
+  <dc:contributor>Luca Longo</dc:contributor>
+  <dc:creator>Aparna Nayak</dc:creator>
+  <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
+  <dc:title>Meta Learning Ontology</dc:title>
 </owl:Ontology>
 
 <owl:ObjectProperty rdf:about="#hasQuality">

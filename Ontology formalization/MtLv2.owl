@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://purl.archive.org/domain/mtl#"
      xml:base="https://purl.archive.org/domain/mtl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dc1="http://purl.org/dc/"
      xmlns:mtl="https://purl.archive.org/domain/mtl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
