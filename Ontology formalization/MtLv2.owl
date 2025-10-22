@@ -17,6 +17,7 @@
     <owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
         <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
         <dc:contributor>Luca Longo</dc:contributor>
+        <dc:contributor>Bojan Bozic</dc:contributor>
         <dc:creator>Aparna Nayak</dc:creator>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:title>Meta Learning Ontology</dc:title>
